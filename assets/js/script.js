@@ -226,7 +226,7 @@ $(document).ready(function(){
         items: 4, // Show 7 items at once
         margin: 15,
         dots: true,
-        autoplay: false,
+        autoplay: true,
         dotsEach: true, // Show a dot for each item
         loop: true,
         onInitialized: updateCounter,
@@ -288,7 +288,7 @@ $('.big-banner-inner .owl-carousel').owlCarousel({
     margin: 10,
     nav: false,
     dots: false,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -331,7 +331,7 @@ $('.testim-inner .owl-carousel').owlCarousel({
     margin: 10,
     nav: true,
     dots: true,
-    autoplay: false,
+    autoplay: true,
     autoplayHoverPause: true,
     navText: [
       "<i class='fa fa-arrow-left-long'></i>",
