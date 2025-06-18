@@ -344,3 +344,26 @@ $('.testim-inner .owl-carousel').owlCarousel({
     }
   })
   // close
+
+
+
+  // cart increment and decrement
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".shop-down").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const input = this.parentElement.querySelector(".quantity-input");
+        let value = parseInt(input.value) || 1;
+        if (value > 1) input.value = value - 1;
+      });
+    });
+
+    document.querySelectorAll(".shop-up").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const input = this.parentElement.querySelector(".quantity-input");
+        let value = parseInt(input.value) || 1;
+        input.value = value + 1;
+      });
+    });
+  });

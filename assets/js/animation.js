@@ -26,6 +26,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
+
+
 //scroller-smooth
 const lenis = new Lenis()
 lenis.on('scroll', (e) => {

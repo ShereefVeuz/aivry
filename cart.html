@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aivri</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32x32.png">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="assets/css/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+
+</head>
+
+<body>
+
+    <!-- loader -->
+    <!-- <div class="loader">
+      <div class="loader-content">
+          <img src="assets/img/binasheergif.gif" alt="Loader" class="loader-icon">
+      </div>
+    </div> -->
+    <!-- loader -->
+
+  <header>
+    <!-- top header -->
+    <div class="top-header">
+      <div class="width-container">
+        <div class="top-header-in">
+          <!-- left top header -->
+          <div class="left-top-header">
+            <h6> Extra <span>Sale 30%</span> off </h6>
+            <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+          </div>
+          <!-- right top header -->
+          <div class="right-top-header">
+            <ul>
+              <li><a href="#"> Track Order </a></li>
+              <li><a href="#"> Help Centre </a></li>
+              <li><a href="#"> FAQ </a></li>
+              <li><a href="#"> About Us </a></li>
+              <li><a href="#"> Contact Us </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- nav header -->
+    <div class="main-header">
+      <div class="width-container">
+        <div class="main-header-in">
+          <!-- header logo-->
+          <div class="header-img">
+            <a href="index.html"><img src="assets/img/logo.png" alt=""></a>
+          </div>
+          <!-- header search-->
+          <div class="nav-search">
+            <form>
+              <input class="form-control" type="search" placeholder="What are you looking for?" aria-label="Search">
+              <button class="btn" type="submit">Search</button>
+            </form>
+          </div>
+          <!-- header nav icons -->
+          <div class="right-nav-top">
+            <!-- manu -->
+            <div class="menu-outr">
+              <div class="menu-button">
+                <i class="fa-solid fa-bars open-icon"></i>
+                <i class="fa-solid fa-times close-icon"></i>
+                <span class="r-menu">Menu</span>
+              </div>
+              
+              <!-- manu dropdown -->
+              <div class="menu-overlay">
+                <nav class="menu">
+                  <a href="#">Home</a>
+                  <a href="#">About</a>
+                  <!-- <div class="menu-dropdown">
+                    <a href="#" class="dropdown-toggle">Products <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#">Products 1</a>
+                      <a href="#">Products 2 </a>
+                      <a href="#">Products 3 </a>
+                      <a href="#">Products 4 </a>
+                    </div>
+                  </div>
+                  <div class="menu-dropdown">
+                    <a href="#" class="dropdown-toggle">Products 2 <i class="fa-solid fa-chevron-down"></i></a>
+                    <div class="dropdown-menu">
+                      <a href="#">Products 2 </a>
+                      <a href="#">Products 2 </a>
+                      <a href="#">Products 2 </a>
+                    </div>
+                  </div> -->
+                  <a href="product-listing.html">Products</a>
+                  <a href="#">Careers</a>
+                  <a href="#">Contact Us</a>
+                </nav>
+              </div>
+            </div>
+            <div class="nav-profile">
+              <button type="button" class="btn prof-btn" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">
+                <i class="fa-regular fa-user"></i>
+              </button>
+
+              <!-- profile Modal -->
+              <div class="profile-login">
+                   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="staticBackdropLabel">
+                                    Sign In
+                                </h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body profile-login-inr">
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email" aria-describedby="emailHelp" required>
+                                        <i class="fas fa-envelope input-icon"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter your password" id="exampleInputPassword1" required>
+                                        <i class="fas fa-lock input-icon"></i>
+                                    </div>
+                                    <div class="prof-login-out">
+                                      <div class="main-btn-out">
+                                        <button type="button" class="btn main-btn">Sign In </button>
+                                      </div>
+                                    </div>
+                                </form>
+                                
+                                <div class="dont-account">
+                                  <div class="already-account">
+                                    <h6>Don’t have an account yet? <br>
+                                       <button class="btn btn-have-account" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle2">Sign up</button>
+                                       for free
+                                    </h6>
+                                  </div>
+                                  <div class="forgot-password">
+                                    <a href="#" onclick="showAlert('Forgot Password', 'Password reset functionality would be implemented here.')">Forgot your password?</a>
+                                  </div>
+                                </div>
+                                <div class="social-divider">
+                                    <span>or continue with</span>
+                                </div>
+                                <div class="social-login">
+                                    <a href="#" class="social-btn google">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                    <a href="#" class="social-btn facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-btn twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalToggleLabel2">
+                                    Sign Up
+                                </h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body profile-login-inr">
+                                <form id="loginForm">
+                                    <div class="form-group">
+                                        <label for="exampleInputName">First Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Enter your name" aria-describedby="name" required>
+                                        <i class="fa-regular fa-user input-icon"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email" aria-describedby="emailHelp" required>
+                                        <i class="fas fa-envelope input-icon"></i>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" placeholder="Enter your password" id="exampleInputPassword1" required>
+                                        <i class="fas fa-lock input-icon"></i>
+                                    </div>
+                                    <div class="prof-login-out">
+                                      <div class="main-btn-out">
+                                        <button type="button" class="btn main-btn">Register </button>
+                                      </div>
+                                    </div>
+                                </form>
+                                
+                                <div class="dont-account">
+                                  <div class="already-account">
+                                    <h6>Already have an account yet? <br> 
+                                      <button class="btn btn-have-account" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Sign in</button> for free</h6>
+                                  </div>
+                                  <div class="forgot-password">
+                                    <a href="#" onclick="showAlert('Forgot Password', 'Password reset functionality would be implemented here.')">Forgot your password?</a>
+                                  </div>
+                                </div>
+                                <div class="social-divider">
+                                    <span>or continue with</span>
+                                </div>
+                                <div class="social-login">
+                                    <a href="#" class="social-btn google">
+                                        <i class="fab fa-google"></i>
+                                    </a>
+                                    <a href="#" class="social-btn facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                    <a href="#" class="social-btn twitter">
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <!-- profile Modal -->
+            </div>
+
+            <!-- cart -->
+            <div class="nav-cart">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.75" height="15" viewBox="0 0 13.75 15">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect id="Rectangle_8212" data-name="Rectangle 8212" width="13.75" height="15" fill="none"></rect>
+                    </clipPath>
+                  </defs>
+                  <g id="Group_7249" data-name="Group 7249">
+                    <path id="Path_38782" data-name="Path 38782" d="M13.125,65.25H.625A.625.625,0,0,1,0,64.586l.625-10A.625.625,0,0,1,1.25,54H12.5a.625.625,0,0,1,.624.586l.625,10a.625.625,0,0,1-.624.664M1.291,64H12.46l-.547-8.75H1.837Z" transform="translate(0 -50.25)" fill="currentcolor"></path>
+                    <path id="Path_38783" data-name="Path 38783" d="M51.875,6.25a.625.625,0,0,1-.625-.625v-2.5A1.877,1.877,0,0,0,49.375,1.25h-1.25A1.877,1.877,0,0,0,46.25,3.125v2.5a.625.625,0,0,1-1.25,0v-2.5A3.129,3.129,0,0,1,48.125,0h1.25A3.129,3.129,0,0,1,52.5,3.125v2.5a.625.625,0,0,1-.625.625" transform="translate(-41.875 0)" fill="currentcolor"></path>
+                  </g>
+                </svg>
+                <span class="small-num1">3</span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark cart-popup-haed" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Cart</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+
+                <form class="table-responsive-md shopping-cart pb-8 pb-lg-10">
+                  <table class="table table-borderless bg-dark">
+
+                    <tbody>
+                      <tr class="position-relative">
+                        <td class="align-middle text-center">
+                          <a href="#" class="d-block clear-product">
+                            <i class="fa-solid fa-xmark"></i>
+                          </a>
+                        </td>
+                        <td class="shop-product">
+                          <div class="d-flex align-items-center">
+                            <div class="me-6">
+                              <img src="assets/img/most-freq-product1.png" width="60" height="80" alt="natural coconut cleansing oil">
+                            </div>
+                            <div class="card-text-out">
+                              <p class="card-text mb-1">
+                                <span class="fs-13px fw-500 text-decoration-line-through pe-3">$39.00</span>
+                                <span class="fs-15px fw-bold text-body-emphasis">$29.00</span>
+                              </p>
+                              <p class="fw-500 text-body-emphasis">Natural Coconut Cleansing Oil</p>
+                            </div>
+                          </div>
+                        </td>
+                        <td class="align-middle">
+                          <div class="input-group position-relative shop-quantity">
+                            <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                             <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                            <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr class="position-relative">
+                        <td class="align-middle text-center">
+                          <a href="#" class="d-block clear-product">
+                            <i class="fa-solid fa-xmark"></i>
+                          </a>
+                        </td>
+                        <td class="shop-product">
+                          <div class="d-flex align-items-center">
+                            <div class="me-6">
+                              <img src="assets/img/most-freq-product1.png" width="60" height="80" alt="natural coconut cleansing oil">
+                            </div>
+                            <div class="card-text-out">
+                              <p class="card-text mb-1">
+                                <span class="fs-13px fw-500 text-decoration-line-through pe-3">$39.00</span>
+                                <span class="fs-15px fw-bold text-body-emphasis">$29.00</span>
+
+                              </p>
+                              <p class="fw-500 text-body-emphasis">Natural Coconut Cleansing Oil</p>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="align-middle">
+                          <div class="input-group position-relative shop-quantity">
+                            <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                             <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                            <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="position-relative">
+                        <td class="align-middle text-center">
+                          <a href="#" class="d-block clear-product">
+                            <i class="fa-solid fa-xmark"></i>
+                          </a>
+                        </td>
+                        <td class="shop-product">
+                          <div class="d-flex align-items-center">
+                            <div class="me-6">
+                              <img src="assets/img/most-freq-product1.png" width="60" height="80" alt="natural coconut cleansing oil">
+                            </div>
+                            <div class="card-text-out">
+                              <p class="card-text mb-1">
+                                <span class="fs-13px fw-500 text-decoration-line-through pe-3">$39.00</span>
+                                <span class="fs-15px fw-bold text-body-emphasis">$29.00</span>
+
+                              </p>
+                              <p class="fw-500 text-body-emphasis">Natural Coconut Cleansing Oil</p>
+                            </div>
+                          </div>
+                        </td>
+
+                        <td class="align-middle">
+                          <div class="input-group position-relative shop-quantity">
+                            <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                             <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                            <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </form>
+
+                <div class="cart-btn-out">
+                  <h4>Total Amount <span>$500</span></h4>
+                  <div class="main-btn-out">
+                    <button type="button" class="btn main-btn">Checkout <i class="fa-solid fa-credit-card"></i> </button>
+                    <button type="button" class="btn second-btn">View Cart <i class="fa-solid fa-cart-shopping"></i></button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+
+
+
+            </div>
+            <div class="nav-wishlist">
+              <a href="wish-list.html">
+                <i class="fa-regular fa-star"></i>
+                <span class="small-num2">3</span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<section class="sec-cart">
+  <div class="width-container">
+    <div class="common-headding">
+      <h2 class="mb-4">Your Shopping Cart</h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 left-cart-page-out">
+            <!-- Cart Items -->
+            <div class="card mb-4">
+                <div class="card-body">
+                  <div class="col-md-12 cart-page-out">
+                    <div class="row justify-content-center align-items-center cart-item mb-3">
+                        <div class="col-md-2 cart-img-out">
+                          <div class="cart-img">
+                            <img src="assets/img/most-freq-product1.png" alt="Product 1" class="img-fluid rounded">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="cart-data">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="text-muted">Category: Electronics</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="cart-incre">
+                            <div class="input-group position-relative shop-quantity">
+                              <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                              <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                              <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                          <div class="cart-amnt">
+                            <p class="fw-bold">$99.99</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2 cart-dl-out">
+                            <button class="btn btn-sm btn-outline-danger">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 cart-page-out">
+                    <div class="row justify-content-center align-items-center cart-item mb-3">
+                        <div class="col-md-2 cart-img-out">
+                          <div class="cart-img">
+                            <img src="assets/img/most-freq-product3.png" alt="Product 1" class="img-fluid rounded">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="cart-data">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="text-muted">Category: Electronics</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="cart-incre">
+                            <div class="input-group position-relative shop-quantity">
+                              <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                              <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                              <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                          <div class="cart-amnt">
+                            <p class="fw-bold">$99.99</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2 cart-dl-out">
+                            <button class="btn btn-sm btn-outline-danger">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 cart-page-out">
+                    <div class="row justify-content-center align-items-center cart-item mb-3">
+                        <div class="col-md-2 cart-img-out">
+                          <div class="cart-img">
+                            <img src="assets/img/most-freq-product2.png" alt="Product 1" class="img-fluid rounded">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="cart-data">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="text-muted">Category: Electronics</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="cart-incre">
+                            <div class="input-group position-relative shop-quantity">
+                              <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                              <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                              <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                          <div class="cart-amnt">
+                            <p class="fw-bold">$99.99</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2 cart-dl-out">
+                            <button class="btn btn-sm btn-outline-danger">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-12 cart-page-out">
+                    <div class="row justify-content-center align-items-center cart-item mb-3">
+                        <div class="col-md-2 cart-img-out">
+                          <div class="cart-img">
+                            <img src="assets/img/most-freq-product4.png" alt="Product 1" class="img-fluid rounded">
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="cart-data">
+                            <h5 class="card-title">Product 1</h5>
+                            <p class="text-muted">Category: Electronics</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="cart-incre">
+                            <div class="input-group position-relative shop-quantity">
+                              <a href="#" class="shop-down position-absolute"><i class="fa-solid fa-minus"></i></a>
+                              <input type="number" class="form-control form-control-sm quantity-input" value="1" min="1">
+                              <a href="#" class="shop-up position-absolute"><i class="fa-solid fa-plus"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-2 text-end">
+                          <div class="cart-amnt">
+                            <p class="fw-bold">$99.99</p>
+                          </div>
+                        </div>
+                        <div class="col-md-2 cart-dl-out">
+                            <button class="btn btn-sm btn-outline-danger">
+                              <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Continue Shopping Button -->
+            <div class="continue-shoping">
+                <div class="main-btn-out">
+                    <a href="index.html" class="main-btn">Continue Shoping </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 cart-summary-out">
+            <!-- Cart Summary -->
+            <div class="card cart-summary">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Subtotal</span>
+                        <span>$199.97</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Shipping</span>
+                        <span>$10.00</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <span>Tax</span>
+                        <span>$20.00</span>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between mb-4">
+                        <strong>Total</strong>
+                        <strong>$229.97</strong>
+                    </div>
+                    <button class="btn sec-cart-btn">Proceed to Checkout</button>
+                </div>
+            </div>
+            <!-- Promo Code -->
+            <div class="card promo-code-out">
+                <div class="card-body">
+                    <h5>Apply Promo Code</h5>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter promo code">
+                        <button class="btn btn-outline-secondary" type="button">Apply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section class="custom-full-pr">
+  <div class="width-container h-100">
+    <div class="custom-full-pr-cont">
+      <button class="btn">CUSTOMER LOVED, BEST SELLING</button>
+      <h2>Signature Makeup Products</h2>
+      <p>Explore our soft, vegan, high quality brushes that offer precision and control.</p>
+    </div>
+  </div>
+</section>
+
+<section class="home-pr-search">
+  <div class="width-container">
+    <div class="home-pr-search-innr">
+      <h3>Receive 15% off your first order</h3>
+      <p>No spam, just the good stuff. Pinky promise.</p>
+      <form>
+        <input class="form-control" type="search" placeholder="Email Address" aria-label="Search">
+        <button class="btn" type="submit">Subscribe </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+  <section class="footer">
+    <div class="width-container">
+      <div class="col-md-12 footer-cont">
+        <div class="row">
+
+          <div class="col-md-12 col-lg-4 left-bottom-logo-out">
+            <div class="left-bottom-logo">
+              <img src="assets/img/logo.png" class="img-fluid" alt="footer-logo">
+            </div>
+            <div class="ft-mail">hello@aivri.com </div>
+            <div class="ft-phone">+02 036 038 3996 </div>
+            <p>3665 Paseo Place, Suite 0960 <br> San Diego</p>
+            <div class="bt-cards">
+              <img src="assets/img/bt-cards.png" class="img-fluid" alt="aivri">
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-8 footer-nav-out-all">
+            <div class="row">
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
+              <div class="footer-nav">
+                <h5>Information</h5>
+                <ul>
+                  <li><a href="#">Home </a></li>
+                  <li><a href="#">About us </a></li>
+                  <li><a href="#">Our Blog </a></li>
+                  <li><a href="#">Start a Return </a></li>
+                  <li><a href="#">Contact Us </a></li>
+                  <li><a href="#">Shipping FAQ </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 footer-nav-out pr-nav-out">
+              <div class="footer-nav">
+                <h5>Products </h5>
+                <ul>
+                  <li><a href="#">Neem comb </a></li>
+                  <li><a href="#">Natural loofah </a></li>
+                  <li><a href="#">Foot scrubber </a></li>
+                  <li><a href="#">Pumice stone </a></li>
+                  <li><a href="#">Nose strips </a></li>
+                  <li><a href="#">Lip sheet mask </a></li>
+                  <li><a href="#">Under eye sheet mask </a></li>
+                  <li><a href="#">Body and face wax strips </a></li>
+                  <li><a href="#">Acne pimple patches strip </a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
+              <div class="footer-nav">
+                <h5>Useful links </h5>
+                <ul>
+                  <li><a href="#">My Account </a></li>
+                  <li><a href="#">Print Provider </a></li>
+                  <li><a href="#">Become a Partner </a></li>
+                  <li><a href="#">Custom Products </a></li>
+                  <li><a href="#">Make your own  </a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom-ft-small">
+    <div class="width-container">
+      <div class="ft-btm-cont">
+        <div class="left-ft-btm-cont">
+          <ul>
+            <li>© 2025 Aivri. All rights reserved. </li>
+            <li><a href="#"> Terms & Conditions </a></li>
+            <li><a href="#"> Privacy Policy </a></li>
+          </ul>
+        </div>
+        <div class="right-ft-btm-cont">
+          <span><a href="#"><i class="fa-brands fa-facebook"></i> </a></span>
+          <span><a href="#"><i class="fa-brands fa-x-twitter"></i></a></span>
+          <span><a href="#"><i class="fa-brands fa-instagram"></i></a></span>
+          <span><a href="#"><i class="fa-brands fa-linkedin"></i></a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scroll-bar-out">
+    <div class="r-scroll">
+    </div>
+  </section>
+
+
+<!-- </div> -->
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.js"></script>
+  <script src="assets/js/font-awsome.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/lenis.min.js"></script>
+  <script src="assets/js/aos.js"></script>
+  <!-- <script src="assets/js/popper.min.js"></script> -->
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="assets/js/animation.js"></script>
+  <!-- <script src="assets/js/bootstrap.min.js"></script> -->
+  <script>
+    AOS.init();
+  </script>
+
+</body>
+
+</html>
