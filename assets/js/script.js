@@ -200,7 +200,7 @@ dropdownToggles.forEach(toggle => {
         items: 7, // Show 7 items at once
         margin: 15,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         dotsEach: true, // Show a dot for each item
         loop: true,
         onInitialized: updateCounter,
@@ -226,7 +226,7 @@ $(document).ready(function(){
         items: 4, // Show 7 items at once
         margin: 15,
         dots: true,
-        autoplay: true,
+        autoplay: false,
         dotsEach: true, // Show a dot for each item
         loop: true,
         onInitialized: updateCounter,
@@ -288,7 +288,7 @@ $('.big-banner-inner .owl-carousel').owlCarousel({
     margin: 10,
     nav: false,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -305,7 +305,7 @@ $('.most-freq .owl-carousel').owlCarousel({
     margin: 20,
     nav: false,
     dots: false,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     responsive: {
       0: {
@@ -331,7 +331,7 @@ $('.testim-inner .owl-carousel').owlCarousel({
     margin: 10,
     nav: true,
     dots: true,
-    autoplay: true,
+    autoplay: false,
     autoplayHoverPause: true,
     navText: [
       "<i class='fa fa-arrow-left-long'></i>",
@@ -367,3 +367,161 @@ $('.testim-inner .owl-carousel').owlCarousel({
       });
     });
   });
+
+
+
+// // price range filter
+function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, "#889c9b", "#2EBB77", controlSlider);
+  fromSlider.value = from;
+
+  if (from > to) {
+    fromSlider.value = to;
+    fromInput.value = to;
+  } else {
+    fromSlider.value = from;
+  }
+}
+
+// Controls the slider using to Input....
+function controlToInput(toSlider, fromInput, toInput, controlSlider) {
+  const [from, to] = getParsed(fromInput, toInput);
+  fillSlider(fromInput, toInput, "#889c9b", "#2EBB77", controlSlider);
+  setToggleAccessible(toInput);
+  toSlider.value = to;
+  toInput.value = to;
+
+  if (from <= to) {
+    toSlider.value = to;
+    toInput.value = to;
+  } else {
+    toInput.value = from;
+  }
+}
+
+// Sliding event of the From slider
+function controlFromSlider(fromSlider, toSlider, fromInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  console.log([from, to]);
+  fillSlider(fromSlider, toSlider, "#889c9b", "#2EBB77", toSlider);
+  fromInput.value = from;
+  if (from > to) {
+    fromInput.value = to;
+    toInput.value = from;
+  }
+}
+
+// Sliding event of the To slider
+function controlToSlider(fromSlider, toSlider, toInput) {
+  const [from, to] = getParsed(fromSlider, toSlider);
+  fillSlider(fromSlider, toSlider, "#889c9b", "#2EBB77", toSlider);
+  setToggleAccessible(toSlider);
+  toSlider.value = to;
+  toInput.value = to;
+  if (from > to) {
+    fromInput.value = to;
+    toInput.value = from;
+  }
+}
+
+// Parsign values of the Inputs
+function getParsed(currentFrom, currentTo) {
+  const from = parseInt(currentFrom.value, 10);
+  const to = parseInt(currentTo.value, 10);
+  return [from, to];
+}
+
+// Changing and Filling the color in the selected part...
+function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
+  let rangeDistance = to.max - to.min;
+  let fromPosition = from.value - to.min;
+  let toPosition = to.value - to.min;
+  if (fromPosition > toPosition) {
+    let spare = fromPosition;
+    fromPosition = toPosition;
+    toPosition = spare;
+  }
+  controlSlider.style.background = `linear-gradient(
+              to right,
+              ${sliderColor} 0%,
+              ${sliderColor} ${(fromPosition / rangeDistance) * 100}%,
+              ${rangeColor} ${(fromPosition / rangeDistance) * 100}%,
+              ${rangeColor} ${(toPosition / rangeDistance) * 100}%, 
+              ${sliderColor} ${(toPosition / rangeDistance) * 100}%, 
+              ${sliderColor} 100%)`;
+}
+
+// Making sure the toggle which we are using is accesible to change the range
+function setToggleAccessible(currentTarget) {
+  const toSlider = document.querySelector("#toSlider");
+  if (Number(currentTarget.value) <= 0) {
+    toSlider.style.zIndex = 2;
+  } else {
+    toSlider.style.zIndex = 0;
+  }
+}
+
+const fromSlider = document.querySelector("#fromSlider");
+const toSlider = document.querySelector("#toSlider");
+const fromInput = document.querySelector("#fromInput");
+const toInput = document.querySelector("#toInput");
+
+// Initially filling the slider using default values...
+fillSlider(fromSlider, toSlider, "#889c9b", "#2EBB77", toSlider);
+setToggleAccessible(toSlider);
+
+// Assigning listner methonds to respective events.
+fromSlider.oninput = () => controlFromSlider(fromSlider, toSlider, fromInput);
+toSlider.oninput = () => controlToSlider(fromSlider, toSlider, toInput);
+fromInput.oninput = () =>
+  controlFromInput(fromSlider, fromInput, toInput, toSlider);
+toInput.oninput = () => controlToInput(toSlider, fromInput, toInput, toSlider);
+// // END price range filter
+
+
+// select color change
+document.querySelectorAll('.color-option').forEach(option => {
+  option.addEventListener('click', function () {
+    // Remove 'selected' from all color options
+    document.querySelectorAll('.color-option').forEach(el => el.classList.remove('selected'));
+    
+    // Add 'selected' to the clicked one
+    this.classList.add('selected');
+  });
+});
+
+
+//// product details slider
+function changeImage(event, src) {
+  document.getElementById('mainImage').src = src;
+  document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
+  event.target.classList.add('active');
+}
+
+//// product rating
+document.addEventListener('DOMContentLoaded', function() {
+  const stars = document.querySelectorAll('.rating-star');
+  const ratingInput = document.getElementById('rating');
+
+  stars.forEach(star => {
+    star.addEventListener('click', function() {
+      const rating = this.getAttribute('data-rating');
+      ratingInput.value = rating;
+      resetStars();
+      for (let i = 0; i < rating; i++) {
+        stars[i].classList.remove('fa-star');
+        stars[i].classList.add('fa-star-fill');
+      }
+    });
+  });
+
+  function resetStars() {
+    stars.forEach(star => {
+      star.classList.remove('fa-star-fill');
+      star.classList.add('fa-star');
+    });
+  }
+});
+
+
