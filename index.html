@@ -27,7 +27,7 @@
     </div> -->
     <!-- loader -->
 
-  <header>
+<header>
     <!-- top header -->
     <div class="top-header">
       <div class="width-container">
@@ -35,16 +35,16 @@
           <!-- left top header -->
           <div class="left-top-header">
             <h6> Extra <span>Sale 30%</span> off </h6>
-            <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+            <a href="product-listing.html" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
           </div>
           <!-- right top header -->
           <div class="right-top-header">
             <ul>
-              <li><a href="#"> Track Order </a></li>
-              <li><a href="#"> Help Centre </a></li>
-              <li><a href="#"> FAQ </a></li>
-              <li><a href="#"> About Us </a></li>
-              <li><a href="#"> Contact Us </a></li>
+              <li><a href="profile.html"> Track Order </a></li>
+              <li><a href="contact.html"> Help Centre </a></li>
+              <li><a href="contact.html"> FAQ </a></li>
+              <li><a href="about.html"> About Us </a></li>
+              <li><a href="contact.html"> Contact Us </a></li>
             </ul>
           </div>
         </div>
@@ -78,8 +78,8 @@
               <!-- manu dropdown -->
               <div class="menu-overlay">
                 <nav class="menu">
-                  <a href="#">Home</a>
-                  <a href="#">About</a>
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About</a>
                   <!-- <div class="menu-dropdown">
                     <a href="#" class="dropdown-toggle">Products <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
@@ -99,7 +99,7 @@
                   </div> -->
                   <a href="product-listing.html">Products</a>
                   <a href="#">Careers</a>
-                  <a href="#">Contact Us</a>
+                  <a href="contact.html">Contact Us</a>
                 </nav>
               </div>
             </div>
@@ -110,7 +110,7 @@
 
               <!-- profile Modal -->
               <div class="profile-login">
-                   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                   <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -134,6 +134,7 @@
                                     <div class="prof-login-out">
                                       <div class="main-btn-out">
                                         <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Sign In </button>
+                                        <button type="button" class="btn second-btn data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3">Sign In With OTP </button>
                                       </div>
                                     </div>
                                 </form>
@@ -167,8 +168,7 @@
                         </div>
                     </div>
                 </div>
-                
-              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                   <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -196,7 +196,7 @@
                                     </div>
                                     <div class="prof-login-out">
                                       <div class="main-btn-out">
-                                        <button type="button" class="btn main-btn">Register </button>
+                                        <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Register </button>
                                       </div>
                                     </div>
                                 </form>
@@ -228,6 +228,62 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalToggleLabel2">
+                                    Enter OTP
+                                </h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body profile-login-inr">
+                              <div class="otp-field" id="otpField">
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input class="space" type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                </div>
+                              <form id="loginForm">
+                                <div class="prof-login-out">
+                                  <div class="main-btn-out">
+                                    <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Register </button>
+                                  </div>
+                                </div>
+                              </form>
+
+                              <div class="dont-account">
+                                <div class="already-account">
+                                  <h6>Already have an account yet? <br>
+                                    <button class="btn btn-have-account" data-bs-dismiss="modal" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModalToggle">Sign in</button> for free</h6>
+                                </div>
+                                <div class="forgot-password">
+                                  <a href="#"
+                                    onclick="showAlert('Forgot Password', 'Password reset functionality would be implemented here.')">Forgot
+                                    your password?</a>
+                                </div>
+                              </div>
+                              <div class="social-divider">
+                                <span>or continue with</span>
+                              </div>
+                              <div class="social-login">
+                                <a href="#" class="social-btn google">
+                                  <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="social-btn facebook">
+                                  <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-btn twitter">
+                                  <i class="fab fa-twitter"></i>
+                                </a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
               </div>
               <!-- profile Modal -->
             </div>
@@ -235,18 +291,10 @@
             <!-- cart -->
             <div class="nav-cart">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.75" height="15" viewBox="0 0 13.75 15">
-                  <defs>
-                    <clipPath id="clip-path">
-                      <rect id="Rectangle_8212" data-name="Rectangle 8212" width="13.75" height="15" fill="none"></rect>
-                    </clipPath>
-                  </defs>
-                  <g id="Group_7249" data-name="Group 7249">
-                    <path id="Path_38782" data-name="Path 38782" d="M13.125,65.25H.625A.625.625,0,0,1,0,64.586l.625-10A.625.625,0,0,1,1.25,54H12.5a.625.625,0,0,1,.624.586l.625,10a.625.625,0,0,1-.624.664M1.291,64H12.46l-.547-8.75H1.837Z" transform="translate(0 -50.25)" fill="currentcolor"></path>
-                    <path id="Path_38783" data-name="Path 38783" d="M51.875,6.25a.625.625,0,0,1-.625-.625v-2.5A1.877,1.877,0,0,0,49.375,1.25h-1.25A1.877,1.877,0,0,0,46.25,3.125v2.5a.625.625,0,0,1-1.25,0v-2.5A3.129,3.129,0,0,1,48.125,0h1.25A3.129,3.129,0,0,1,52.5,3.125v2.5a.625.625,0,0,1-.625.625" transform="translate(-41.875 0)" fill="currentcolor"></path>
-                  </g>
+                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24" fill="currentColor">
+                  <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
                 </svg>
-                <span class="small-num1">3</span>
+                <span class="small-num1">4</span>
               </button>
               <div class="offcanvas offcanvas-end text-bg-dark cart-popup-haed" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
               <div class="offcanvas-header">
@@ -329,10 +377,10 @@
                             <div class="me-6">
                               <img src="assets/img/most-freq-product1.png" width="60" height="80" alt="natural coconut cleansing oil">
                             </div>
-                            <div class="card-text-out">
-                              <p class="card-text mb-1">
-                                <span class="fs-13px fw-500 text-decoration-line-through pe-3">$39.00</span>
-                                <span class="fs-15px fw-bold text-body-emphasis">$29.00</span>
+                            <div class="cart-amt-text-out">
+                              <p>
+                                <span class="cross-amt">$39.00</span>
+                                <span class="new-amt">$29.00</span>
 
                               </p>
                               <p class="fw-500 text-body-emphasis">Natural Coconut Cleansing Oil</p>
@@ -355,7 +403,7 @@
                 <div class="cart-btn-out">
                   <h4>Total Amount <span>$500</span></h4>
                   <div class="main-btn-out">
-                    <a href="#" class="main-btn">Checkout <i class="fa-solid fa-credit-card"></i> </a>
+                    <a href="checkout.html" class="main-btn">Checkout <i class="fa-solid fa-credit-card"></i> </a>
                     <a href="cart.html" class="second-btn">View Cart <i class="fa-solid fa-cart-shopping"></i></a>
                   </div>
                 </div>
@@ -365,7 +413,7 @@
             </div>
             <div class="nav-wishlist">
               <a href="wish-list.html">
-                <i class="fa-regular fa-star"></i>
+                <i class="fa-solid fa-heart"></i>
                 <span class="small-num2">3</span>
               </a>
             </div>
@@ -395,8 +443,8 @@
               <p>What’s more, we do it right! A full administration printing background. 
                 Print shirts for yourself or your online business</p>
                 <div class="main-btn-out">
-                  <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i> </button>
-                  <button type="button" class="btn second-btn">How We Work <i class="fa-regular fa-circle-play"></i></button>
+                  <a href="product-listing.html" class="main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                  <a href="about.html" class="second-btn">How We Work <i class="fa-regular fa-circle-play"></i></a>
                 </div>
             </div>
           </div>
@@ -407,8 +455,8 @@
               <p>What’s more, we do it right! A full administration printing background. 
                 Print shirts for yourself or your online business</p>
                 <div class="main-btn-out">
-                  <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i> </button>
-                  <button type="button" class="btn second-btn">How We Work <i class="fa-regular fa-circle-play"></i></button>
+                  <a href="product-listing.html" class="main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                  <a href="about.html" class="second-btn">How We Work <i class="fa-regular fa-circle-play"></i></a>
                 </div>
             </div>
           </div>
@@ -419,8 +467,8 @@
               <p>What’s more, we do it right! A full administration printing background. 
                 Print shirts for yourself or your online business</p>
                 <div class="main-btn-out">
-                  <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i> </button>
-                  <button type="button" class="btn second-btn">How We Work <i class="fa-regular fa-circle-play"></i></button>
+                  <a href="product-listing.html" class="main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
+                  <a href="about.html" class="second-btn">How We Work <i class="fa-regular fa-circle-play"></i></a>
                 </div>
             </div>
           </div>
@@ -475,6 +523,7 @@
           <div class="top-products-item-bg">
             <img src="assets/img/top-prd-05.png" class="img-fluid" alt="aivri">
           </div>
+          <h6>Pumice stone </h6>
         </div>
         <div class="item">
           <div class="top-products-item-bg">
@@ -555,7 +604,6 @@
           </div>
           <h6>Acne pimple patches strip </h6>
         </div>
-
       </div>
     </div>
   </div>
@@ -576,13 +624,13 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
-              <button type="button" class="btn" onclick="window.location.href='product-listing.html'">
+              <a href="product-listing.html">
                 <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="top-categories-item-bg">
@@ -612,13 +660,13 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
-              <button type="button" class="btn" onclick="window.location.href='product-listing.html'">
+              <a href="product-listing.html">
                 <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="top-categories-item-bg">
@@ -648,13 +696,13 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
-              <button type="button" class="btn" onclick="window.location.href='product-listing.html'">
+              <a href="product-listing.html">
                 <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="top-categories-item-bg">
@@ -684,13 +732,13 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
-              <button type="button" class="btn" onclick="window.location.href='product-listing.html'">
+              <a href="product-listing.html">
                 <i class="fa-solid fa-arrow-right-long"></i>
-              </button>
+              </a>
             </div>
           </div>
           <div class="top-categories-item-bg">
@@ -721,7 +769,7 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
@@ -757,7 +805,7 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
@@ -793,7 +841,7 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
@@ -829,7 +877,7 @@
             <div class="left-item-content">
               <h5>Most Frequently Purchased </h5>
               <h6><span class="main-amt">₹1,350 </span><span class="small-amt"> ₹1,500 </span><span class="off-amt">(10% off) </span>
-              <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span>
+              <span class="left-item-cont-in"><span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">1604</span></span>
               </h6>
             </div>
             <div class="right-item-content">
@@ -1056,7 +1104,7 @@
             
             <div class="most-freq-item-cont">
               <div class="left-most-freq-item-cont">
-                <h6>Re—touch Soft Focus Setting Powder</h6>
+                <h6><a href="product-listing.html">Re—touch Soft Focus Setting Powder </a></h6>
                 <div class="most-freq-dtls">
                   <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">| 184 reviews</span>
                 </div>
@@ -1092,7 +1140,7 @@
 
             <div class="most-freq-item-cont">
               <div class="left-most-freq-item-cont">
-                <h6>Re—touch Soft Focus Setting Powder</h6>
+                <h6><a href="product-listing.html">Re—touch Soft Focus Setting Powder </a></h6>
                 <div class="most-freq-dtls">
                   <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">| 184 reviews</span>
                 </div>
@@ -1127,7 +1175,7 @@
             </div>
             <div class="most-freq-item-cont">
               <div class="left-most-freq-item-cont">
-                <h6>Re—touch Soft Focus Setting Powder</h6>
+                <h6><a href="product-listing.html">Re—touch Soft Focus Setting Powder </a></h6>
                 <div class="most-freq-dtls">
                   <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">| 184 reviews</span>
                 </div>
@@ -1162,7 +1210,7 @@
             </div>
             <div class="most-freq-item-cont">
               <div class="left-most-freq-item-cont">
-                <h6>Re—touch Soft Focus Setting Powder</h6>
+                <h6><a href="product-listing.html">Re—touch Soft Focus Setting Powder </a></h6>
                 <div class="most-freq-dtls">
                   <span class="value">4.7</span><span class="star"><i class="fa-solid fa-star"></i></span><span class="value-count">| 184 reviews</span>
                 </div>
@@ -1185,7 +1233,7 @@
     <div class="home-shiping-list">
       <div class="row">
 
-        <div class="col-md-3 home-shiping-item">
+        <div class="col-6 col-sm-6 col-lg-3 home-shiping-item">
           <div class="home-shiping-cont">
             <div class="home-shiping-img">
               <img src="assets/img/shipping_01.png" class="img-fluid" alt="aivri">
@@ -1194,7 +1242,7 @@
             <p>on all <br> orders ₹40+</p>
           </div>
         </div>
-        <div class="col-md-3 home-shiping-item">
+        <div class="col-6 col-sm-6 col-lg-3 home-shiping-item">
           <div class="home-shiping-cont">
             <div class="home-shiping-img">
               <img src="assets/img/shipping_02.png" class="img-fluid" alt="aivri">
@@ -1204,7 +1252,7 @@
 1 pt for every dollar spent </p>
           </div>
         </div>
-        <div class="col-md-3 home-shiping-item">
+        <div class="col-6 col-sm-6 col-lg-3 home-shiping-item">
           <div class="home-shiping-cont">
             <div class="home-shiping-img">
               <img src="assets/img/shipping_03.png" class="img-fluid" alt="aivri">
@@ -1214,7 +1262,7 @@
 two times per year </p>
           </div>
         </div>
-        <div class="col-md-3 home-shiping-item">
+        <div class="col-6 col-sm-6 col-lg-3 home-shiping-item">
           <div class="home-shiping-cont">
             <div class="home-shiping-img">
               <img src="assets/img/shipping_04.png" class="img-fluid" alt="aivri">
@@ -1244,7 +1292,9 @@ sustainable + recyclable</p>
               Founded by Ashley Ocampo, a perfectionist cosmetic chemist, our products are easy-to-wear, comfortable, intuitive to apply, 
               and long-lasting, so you won't think twice about using. Plus, they're skin-friendly!
             </p>
-            <button class="btn main-btn">Learn More <i class="fa-solid fa-arrow-right-long"></i></button>
+            <a href="about.html" class="btn main-btn">Learn More 
+              <!-- <i class="fa-solid fa-arrow-right-long"></i> -->
+            </a>
           </div>
         </div>
         <div class="col-md-6 left-mkp-products-item">
@@ -1355,7 +1405,7 @@ sustainable + recyclable</p>
 <section class="custom-full-pr">
   <div class="width-container h-100">
     <div class="custom-full-pr-cont">
-      <button class="btn">CUSTOMER LOVED, BEST SELLING</button>
+      <div class="custom-loved">CUSTOMER LOVED, BEST SELLING</div>
       <h2>Signature Makeup Products</h2>
       <p>Explore our soft, vegan, high quality brushes that offer precision and control.</p>
     </div>
@@ -1375,7 +1425,7 @@ sustainable + recyclable</p>
   </div>
 </section>
 
-
+<!-- footer -->
   <section class="footer">
     <div class="width-container">
       <div class="col-md-12 footer-cont">
@@ -1399,12 +1449,12 @@ sustainable + recyclable</p>
               <div class="footer-nav">
                 <h5>Information</h5>
                 <ul>
-                  <li><a href="#">Home </a></li>
-                  <li><a href="#">About us </a></li>
+                  <li><a href="index.html">Home </a></li>
+                  <li><a href="about.html">About us </a></li>
                   <li><a href="#">Our Blog </a></li>
-                  <li><a href="#">Start a Return </a></li>
-                  <li><a href="#">Contact Us </a></li>
-                  <li><a href="#">Shipping FAQ </a></li>
+                  <li><a href="profile.html">Start a Return </a></li>
+                  <li><a href="contact.html">Contact Us </a></li>
+                  <li><a href="contact.html">FAQ </a></li>
                 </ul>
               </div>
             </div>
@@ -1412,15 +1462,15 @@ sustainable + recyclable</p>
               <div class="footer-nav">
                 <h5>Products </h5>
                 <ul>
-                  <li><a href="#">Neem comb </a></li>
-                  <li><a href="#">Natural loofah </a></li>
-                  <li><a href="#">Foot scrubber </a></li>
-                  <li><a href="#">Pumice stone </a></li>
-                  <li><a href="#">Nose strips </a></li>
-                  <li><a href="#">Lip sheet mask </a></li>
-                  <li><a href="#">Under eye sheet mask </a></li>
-                  <li><a href="#">Body and face wax strips </a></li>
-                  <li><a href="#">Acne pimple patches strip </a></li>
+                  <li><a href="product-listing.html">Neem comb </a></li>
+                  <li><a href="product-listing.html">Natural loofah </a></li>
+                  <li><a href="product-listing.html">Foot scrubber </a></li>
+                  <li><a href="product-listing.html">Pumice stone </a></li>
+                  <li><a href="product-listing.html">Nose strips </a></li>
+                  <li><a href="product-listing.html">Lip sheet mask </a></li>
+                  <li><a href="product-listing.html">Under eye sheet mask </a></li>
+                  <li><a href="product-listing.html">Body and face wax strips </a></li>
+                  <li><a href="product-listing.html">Acne pimple patches strip </a></li>
                 </ul>
               </div>
             </div>
@@ -1428,11 +1478,11 @@ sustainable + recyclable</p>
               <div class="footer-nav">
                 <h5>Useful links </h5>
                 <ul>
-                  <li><a href="#">My Account </a></li>
-                  <li><a href="#">Print Provider </a></li>
-                  <li><a href="#">Become a Partner </a></li>
-                  <li><a href="#">Custom Products </a></li>
-                  <li><a href="#">Make your own  </a></li>
+                  <li><a href="profile.html">My Account </a></li>
+                  <li><a href="profile.html">Print Provider </a></li>
+                  <li><a href="profile.html">Become a Partner </a></li>
+                  <li><a href="profile.html">Custom Products </a></li>
+                  <li><a href="profile.html">Make your own  </a></li>
                 </ul>
               </div>
             </div>
@@ -1488,6 +1538,102 @@ sustainable + recyclable</p>
   <script>
     AOS.init();
   </script>
+
+  <script>
+    // OTP
+    const inputs = document.querySelectorAll('.otp-field input');
+    const result = document.getElementById('result');
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('input', (e) => handleInput(e, index));
+      input.addEventListener('keydown', (e) => handleKeydown(e, index));
+      input.addEventListener('paste', handlePaste);
+    });
+
+    function handleInput(e, index) {
+      const value = e.target.value;
+
+      // Only allow numbers
+      if (!/^\d*$/.test(value)) {
+        e.target.value = '';
+        return;
+      }
+
+      // Move to next input if current is filled
+      if (value && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+
+      updateResult();
+    }
+
+    function handleKeydown(e, index) {
+      // Handle backspace
+      if (e.key === 'Backspace') {
+        if (!e.target.value && index > 0) {
+          inputs[index - 1].focus();
+        }
+      }
+
+      // Handle arrow keys
+      if (e.key === 'ArrowLeft' && index > 0) {
+        inputs[index - 1].focus();
+      }
+
+      if (e.key === 'ArrowRight' && index < inputs.length - 1) {
+        inputs[index + 1].focus();
+      }
+
+      // Handle number keys - clear current input first
+      if (/^\d$/.test(e.key)) {
+        e.target.value = '';
+      }
+    }
+
+    function handlePaste(e) {
+      e.preventDefault();
+      const pasteData = e.clipboardData.getData('text');
+      const numbers = pasteData.replace(/\D/g, '').slice(0, 6);
+
+      numbers.split('').forEach((num, index) => {
+        if (inputs[index]) {
+          inputs[index].value = num;
+        }
+      });
+
+      // Focus on the next empty input or last input
+      const nextEmpty = [...inputs].findIndex(input => !input.value);
+      const focusIndex = nextEmpty !== -1 ? nextEmpty : inputs.length - 1;
+      inputs[focusIndex].focus();
+
+      updateResult();
+    }
+
+    function updateResult() {
+      const otp = Array.from(inputs).map(input => input.value || '_').join('');
+      const filledCount = Array.from(inputs).filter(input => input.value).length;
+
+      if (filledCount === 6) {
+        result.textContent = `OTP Complete: ${otp.replace(/./g, (char, index) => index === 2 ? char + ' ' : char)}`;
+        result.classList.add('complete');
+      } else {
+        result.textContent =
+          `Progress: ${otp.replace(/./g, (char, index) => index === 2 ? char + ' ' : char)} (${filledCount}/6)`;
+        result.classList.remove('complete');
+      }
+    }
+
+    function clearOTP() {
+      inputs.forEach(input => input.value = '');
+      inputs[0].focus();
+      result.textContent = 'Enter your 6-digit OTP code';
+      result.classList.remove('complete');
+    }
+
+    // Focus first input on load
+    inputs[0].focus();
+  </script>
+
 
 </body>
 

@@ -19,15 +19,15 @@
 
 <body>
 
-    <!-- loader -->
-    <!-- <div class="loader">
+  <!-- loader -->
+  <!-- <div class="loader">
       <div class="loader-content">
           <img src="assets/img/binasheergif.gif" alt="Loader" class="loader-icon">
       </div>
     </div> -->
-    <!-- loader -->
+  <!-- loader -->
 
-  <header>
+<header>
     <!-- top header -->
     <div class="top-header">
       <div class="width-container">
@@ -35,16 +35,16 @@
           <!-- left top header -->
           <div class="left-top-header">
             <h6> Extra <span>Sale 30%</span> off </h6>
-            <button type="button" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></button>
+            <a href="product-listing.html" class="btn main-btn">Shop Now <i class="fa-solid fa-arrow-right-long"></i></a>
           </div>
           <!-- right top header -->
           <div class="right-top-header">
             <ul>
-              <li><a href="#"> Track Order </a></li>
-              <li><a href="#"> Help Centre </a></li>
-              <li><a href="#"> FAQ </a></li>
-              <li><a href="#"> About Us </a></li>
-              <li><a href="#"> Contact Us </a></li>
+              <li><a href="profile.html"> Track Order </a></li>
+              <li><a href="contact.html"> Help Centre </a></li>
+              <li><a href="contact.html"> FAQ </a></li>
+              <li><a href="about.html"> About Us </a></li>
+              <li><a href="contact.html"> Contact Us </a></li>
             </ul>
           </div>
         </div>
@@ -78,8 +78,8 @@
               <!-- manu dropdown -->
               <div class="menu-overlay">
                 <nav class="menu">
-                  <a href="#">Home</a>
-                  <a href="#">About</a>
+                  <a href="index.html">Home</a>
+                  <a href="about.html">About</a>
                   <!-- <div class="menu-dropdown">
                     <a href="#" class="dropdown-toggle">Products <i class="fa-solid fa-chevron-down"></i></a>
                     <div class="dropdown-menu">
@@ -99,7 +99,7 @@
                   </div> -->
                   <a href="product-listing.html">Products</a>
                   <a href="#">Careers</a>
-                  <a href="#">Contact Us</a>
+                  <a href="contact.html">Contact Us</a>
                 </nav>
               </div>
             </div>
@@ -110,7 +110,7 @@
 
               <!-- profile Modal -->
               <div class="profile-login">
-                   <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                   <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -134,6 +134,7 @@
                                     <div class="prof-login-out">
                                       <div class="main-btn-out">
                                         <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Sign In </button>
+                                        <button type="button" class="btn second-btn data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#exampleModalToggle3">Sign In With OTP </button>
                                       </div>
                                     </div>
                                 </form>
@@ -167,8 +168,7 @@
                         </div>
                     </div>
                 </div>
-                
-              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
                   <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -196,7 +196,7 @@
                                     </div>
                                     <div class="prof-login-out">
                                       <div class="main-btn-out">
-                                        <button type="button" class="btn main-btn">Register </button>
+                                        <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Register </button>
                                       </div>
                                     </div>
                                 </form>
@@ -228,6 +228,62 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+                  <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title" id="exampleModalToggleLabel2">
+                                    Enter OTP
+                                </h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body profile-login-inr">
+                              <div class="otp-field" id="otpField">
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input class="space" type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                  <input type="text" maxlength="1" />
+                                </div>
+                              <form id="loginForm">
+                                <div class="prof-login-out">
+                                  <div class="main-btn-out">
+                                    <button type="button" class="btn main-btn" onclick="window.location.href='profile.html'">Register </button>
+                                  </div>
+                                </div>
+                              </form>
+
+                              <div class="dont-account">
+                                <div class="already-account">
+                                  <h6>Already have an account yet? <br>
+                                    <button class="btn btn-have-account" data-bs-dismiss="modal" data-bs-toggle="modal"
+                                      data-bs-target="#exampleModalToggle">Sign in</button> for free</h6>
+                                </div>
+                                <div class="forgot-password">
+                                  <a href="#"
+                                    onclick="showAlert('Forgot Password', 'Password reset functionality would be implemented here.')">Forgot
+                                    your password?</a>
+                                </div>
+                              </div>
+                              <div class="social-divider">
+                                <span>or continue with</span>
+                              </div>
+                              <div class="social-login">
+                                <a href="#" class="social-btn google">
+                                  <i class="fab fa-google"></i>
+                                </a>
+                                <a href="#" class="social-btn facebook">
+                                  <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="social-btn twitter">
+                                  <i class="fab fa-twitter"></i>
+                                </a>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
               </div>
               <!-- profile Modal -->
             </div>
@@ -235,18 +291,10 @@
             <!-- cart -->
             <div class="nav-cart">
               <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="13.75" height="15" viewBox="0 0 13.75 15">
-                  <defs>
-                    <clipPath id="clip-path">
-                      <rect id="Rectangle_8212" data-name="Rectangle 8212" width="13.75" height="15" fill="none"></rect>
-                    </clipPath>
-                  </defs>
-                  <g id="Group_7249" data-name="Group 7249">
-                    <path id="Path_38782" data-name="Path 38782" d="M13.125,65.25H.625A.625.625,0,0,1,0,64.586l.625-10A.625.625,0,0,1,1.25,54H12.5a.625.625,0,0,1,.624.586l.625,10a.625.625,0,0,1-.624.664M1.291,64H12.46l-.547-8.75H1.837Z" transform="translate(0 -50.25)" fill="currentcolor"></path>
-                    <path id="Path_38783" data-name="Path 38783" d="M51.875,6.25a.625.625,0,0,1-.625-.625v-2.5A1.877,1.877,0,0,0,49.375,1.25h-1.25A1.877,1.877,0,0,0,46.25,3.125v2.5a.625.625,0,0,1-1.25,0v-2.5A3.129,3.129,0,0,1,48.125,0h1.25A3.129,3.129,0,0,1,52.5,3.125v2.5a.625.625,0,0,1-.625.625" transform="translate(-41.875 0)" fill="currentcolor"></path>
-                  </g>
+                <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24" fill="currentColor">
+                  <path d="M0 24C0 10.7 10.7 0 24 0L69.5 0c22 0 41.5 12.8 50.6 32l411 0c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3l-288.5 0 5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5L488 336c13.3 0 24 10.7 24 24s-10.7 24-24 24l-288.3 0c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5L24 48C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
                 </svg>
-                <span class="small-num1">3</span>
+                <span class="small-num1">4</span>
               </button>
               <div class="offcanvas offcanvas-end text-bg-dark cart-popup-haed" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
               <div class="offcanvas-header">
@@ -329,10 +377,10 @@
                             <div class="me-6">
                               <img src="assets/img/most-freq-product1.png" width="60" height="80" alt="natural coconut cleansing oil">
                             </div>
-                            <div class="card-text-out">
-                              <p class="card-text mb-1">
-                                <span class="fs-13px fw-500 text-decoration-line-through pe-3">$39.00</span>
-                                <span class="fs-15px fw-bold text-body-emphasis">$29.00</span>
+                            <div class="cart-amt-text-out">
+                              <p>
+                                <span class="cross-amt">$39.00</span>
+                                <span class="new-amt">$29.00</span>
 
                               </p>
                               <p class="fw-500 text-body-emphasis">Natural Coconut Cleansing Oil</p>
@@ -355,20 +403,17 @@
                 <div class="cart-btn-out">
                   <h4>Total Amount <span>$500</span></h4>
                   <div class="main-btn-out">
-                    <a href="#" class="main-btn">Checkout <i class="fa-solid fa-credit-card"></i> </a>
+                    <a href="checkout.html" class="main-btn">Checkout <i class="fa-solid fa-credit-card"></i> </a>
                     <a href="cart.html" class="second-btn">View Cart <i class="fa-solid fa-cart-shopping"></i></a>
                   </div>
                 </div>
                 
               </div>
             </div>
-
-
-
             </div>
             <div class="nav-wishlist">
               <a href="wish-list.html">
-                <i class="fa-regular fa-star"></i>
+                <i class="fa-solid fa-heart"></i>
                 <span class="small-num2">3</span>
               </a>
             </div>
@@ -379,159 +424,920 @@
 </header>
 
 
-<section class="sec-cart">
-  <div class="width-container">
-    <div class="profile-in">
-      <!-- <div class="common-headding">
+  <section class="sec-cart">
+    <div class="width-container">
+      <div class="profile-in">
+        <!-- <div class="common-headding">
         <h2 class="mb-4">My Profile </h2>
       </div> -->
-      <div class="profile-content">
-        <!-- <div class="container py-5"> -->
-            <div class="row">
+        <div class="profile-content">
+          <!-- <div class="container py-5"> -->
+          <div class="row">
 
-                <!-- Main Content -->
-                <div class="col-12">
-                    <div class="">
-                        <div class="p-0">
-                            <div class="row">
-                                <!-- Sidebar -->
-                                <div class="col-lg-3">
-                                  <div class="left-profile">
+            <!-- Main Content -->
+            <div class="col-12">
+              <div class="">
+                <div class="p-0">
+                  <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-lg-3">
+                      <div class="left-profile">
 
-                                    <div class="col-md-12 profile-header-out">
-                                        <div class="profile-header">
-                                            <!-- <div class="position-absolute top-0 end-0 p-3">
-                                                <button class="btn btn-light"><i class="fas fa-edit me-2"></i>Edit Cover</button>
-                                            </div> -->
-                                        </div>
-                                        <div class="profile-head-dtls-out">
-                                            <div class="profile-head-dtls">
-                                                <img src="https://randomuser.me/api/portraits/men/40.jpg" class="rounded-circle profile-pic" alt="Profile Picture">
-                                                <button class="btn">
-                                                    <i class="fas fa-camera"></i>
-                                                </button>
-                                            </div>
-                                            <h3 class="mt-3 mb-1">Alex Johnso</h3>
-                                            <p class="text-muted mb-3">Senior Product Designer</p>
-                                            <!-- <div class="d-flex justify-content-center gap-2 mb-4">
-                                                <button class="btn btn-outline-primary"><i class="fas fa-envelope me-2"></i>Message</button>
-                                                <button class="btn btn-primary"><i class="fas fa-user-plus me-2"></i>Connect</button>
-                                            </div> -->
-                                        </div>
+                        <div class="col-md-12 profile-header-out">
+                          <div class="profile-header">
+                          </div>
+                          <div class="profile-head-dtls-out">
+                            <div class="profile-head-dtls">
+                              <img src="https://randomuser.me/api/portraits/men/40.jpg" 
+                                class="rounded-circle profile-pic" 
+                                alt="Profile Picture"
+                                id="profileImage">
+                              <button class="btn" onclick="selectImage()">
+                                <i class="fas fa-camera"></i>
+                              </button>
+                              <input type="file" id="imageInput" accept="image/*" 
+                                onchange="handleImageSelect(event)">
+                            </div>
+                            <h3 class="mt-3 mb-1">Alex Johnso</h3>
+                            <p class="text-muted mb-3">Senior Product Designer</p>
+                          </div>
+                        </div>
+
+                        <div class="full-nav-pills-out">
+                          <div class="nav flex-column nav-pills">
+
+                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                  aria-selected="true">
+                                  <!-- <i class="fas fa-user me-2"></i>  -->
+                                  Profile
+                                </button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-history-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-history" type="button" role="tab" aria-controls="pills-history"
+                                  aria-selected="false">
+                                  My Orders
+                                </button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-cart-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-cart" type="button" role="tab" aria-controls="pills-cart"
+                                  aria-selected="false">
+                                  Cart
+                                </button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wishlist-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-wishlist" type="button" role="tab"
+                                  aria-controls="pills-wishlist" aria-selected="false">
+                                  WishList
+                                </button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-address-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-address" type="button" role="tab" aria-controls="pills-address"
+                                  aria-selected="false">
+                                  Manage Address
+                                </button>
+                              </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-password-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-password" type="button" role="tab"
+                                  aria-controls="pills-password" aria-selected="false">
+                                  Change Password
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Content Area -->
+                    <div class="col-lg-9">
+                      <div class="right-profile">
+                        <!-- Personal Information -->
+                        <div class="tab-content" id="pills-tabContent">
+
+                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab" tabindex="0">
+                            <div class="main-profile-list-out">
+                              <div class="main-profile-list">
+                                <h5 class="mb-4">Profile </h5>
+                                <div class="row">
+                                  <div class="col-sm-6 col-md-4 main-profile-list-cart-out">
+                                    <div class="main-profile-list-cart">
+                                      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30"
+                                        viewBox="0 0 13.75 15">
+                                        <defs>
+                                          <clipPath id="clip-path">
+                                            <rect id="Rectangle_8212" data-name="Rectangle 8212" width="13.75"
+                                              height="15" fill="none"></rect>
+                                          </clipPath>
+                                        </defs>
+                                        <g id="Group_7249" data-name="Group 7249">
+                                          <path id="Path_38782" data-name="Path 38782"
+                                            d="M13.125,65.25H.625A.625.625,0,0,1,0,64.586l.625-10A.625.625,0,0,1,1.25,54H12.5a.625.625,0,0,1,.624.586l.625,10a.625.625,0,0,1-.624.664M1.291,64H12.46l-.547-8.75H1.837Z"
+                                            transform="translate(0 -50.25)" fill="currentcolor"></path>
+                                          <path id="Path_38783" data-name="Path 38783"
+                                            d="M51.875,6.25a.625.625,0,0,1-.625-.625v-2.5A1.877,1.877,0,0,0,49.375,1.25h-1.25A1.877,1.877,0,0,0,46.25,3.125v2.5a.625.625,0,0,1-1.25,0v-2.5A3.129,3.129,0,0,1,48.125,0h1.25A3.129,3.129,0,0,1,52.5,3.125v2.5a.625.625,0,0,1-.625.625"
+                                            transform="translate(-41.875 0)" fill="currentcolor"></path>
+                                        </g>
+                                      </svg>
+                                      <h3>10 Products</h3>
+                                      <p>In your Cart</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-4 main-profile-list-cart-out">
+                                    <div class="main-profile-list-cart">
+                                      <i class="fa-regular fa-star"></i>
+                                      <h3>10 Products</h3>
+                                      <p>In Wishlist</p>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-4 main-profile-list-cart-out">
+                                    <div class="main-profile-list-cart">
+                                      <i class="fa-solid fa-cart-shopping"></i>
+                                      <h3>10 Products</h3>
+                                      <p>In your Order</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="personal-info">
+                                <h5 class="mb-4">Personal Information</h5>
+                                <form>
+                                  <div class="row g-3">
+                                    <div class="col-md-6">
+                                      <label class="form-label">Full Name </label>
+                                      <input type="text" class="form-control disable-field" value="Alex">
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="dob" class="form-label">Date of Birth</label>
+                                        <input type="date" id="dob" class="form-control disable-field" name="dob" required>
+                                      </div>
                                     </div>
 
-                                    <div class="p-4">
-                                        <div class="nav flex-column nav-pills">
+                                    <!-- <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label for="image" class="form-label">Profile Image</label>
+                                        <div class="image-upload"
+                                          onclick="document.getElementById('imageInput').click()">
+                                          <input type="file" id="imageInput" accept="image/*"
+                                            onchange="handleImageUpload(event)"> -->
+                                          <!-- <div class="upload-subtext">PNG, JPG, or GIF (Max 5MB)</div> -->
+                                          <!-- <div id="imagePreview" class="image-preview" style="display: none;">
+                                            <img id="previewImg" src="" alt="Preview">
+                                          </div> -->
+                                        <!-- </div>
+                                      </div>
+                                    </div> -->
 
-                                            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                                              <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
-                                                  <i class="fas fa-user me-2"></i> Profile
-                                                </button>
-                                              </li>
-                                              <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">
-                                                  Order History
-                                                </button>
-                                              </li>
-                                              <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">
-                                                  WishList
-                                                </button>
-                                              </li>
-                                              <!-- <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-cart" aria-selected="false">
-                                                  Cart
-                                                </button>
-                                              </li> -->
-                                            </ul>
+                                    <div class="col-md-6">
+                                      <div class="form-group">
+                                        <label class="form-label">Gender</label>
+
+                                        <div class="gender-options">
+                                          <div class="gender-option">
+                                            <input type="radio" id="male" class="disable-field" name="gender" value="male" required>
+                                            <label for="male">Male</label>
+                                          </div>
+                                          <div class="gender-option">
+                                            <input type="radio" id="female" class=" disable-field" name="gender" value="female" required>
+                                            <label for="female">Female</label>
+                                          </div>
                                         </div>
-                                        
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- Button -->
+                                  <div class="main-btn-out">
+                                    <a id="reset" name="singlebutton" class="btn main-btn">Edit </a>
+                                    <a id="elementId" name="singlebutton" class="btn second-btn"
+                                      onclick="disableFunction()">Save</a>
+                                  </div>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- My Orders -->
+                          <div class="tab-pane fade" id="pills-history" role="tabpanel"
+                            aria-labelledby="pills-history-tab" tabindex="0">
+                            <div class="profile-order-history">
+                              <h5 class="mb-4">My Orders</h5>
+                              <div class="order-list">
+
+                                <nav>
+                                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                    <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                      data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home"
+                                      aria-selected="true">
+                                      All
+                                    </button>
+                                    <button class="nav-link" id="nav-shipped-tab" data-bs-toggle="tab"
+                                      data-bs-target="#nav-shipped" type="button" role="tab" aria-controls="nav-shipped"
+                                      aria-selected="false">
+                                      Shipped
+                                    </button>
+                                    <button class="nav-link" id="nav-delivered-tab" data-bs-toggle="tab"
+                                      data-bs-target="#nav-delivered" type="button" role="tab"
+                                      aria-controls="nav-delivered" aria-selected="false">
+                                      Delivered
+                                    </button>
+                                    <button class="nav-link" id="nav-cancelled-tab" data-bs-toggle="tab"
+                                      data-bs-target="#nav-cancelled" type="button" role="tab"
+                                      aria-controls="nav-cancelled" aria-selected="false">
+                                      Cancelled
+                                    </button>
+                                    <!-- <button class="nav-link" id="nav-returned-tab" data-bs-toggle="tab" data-bs-target="#nav-returned" type="button" role="tab" aria-controls="nav-returned" aria-selected="false">
+                                                      Returned
+                                                    </button> -->
+                                  </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                    aria-labelledby="nav-home-tab" tabindex="0">
+
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist">Delivered </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-history-delivered.html">Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist ordered-hist2">Shipped </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-history-shipped.html"> Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist ordered-hist3">Cancelled </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-history-cancel.html">Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                  </div>
+                                  <div class="tab-pane fade" id="nav-shipped" role="tabpanel"
+                                    aria-labelledby="nav-shipped-tab" tabindex="0">
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist ordered-hist2">Shipped </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-history-shipped.html"> Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="nav-delivered" role="tabpanel"
+                                    aria-labelledby="nav-delivered-tab" tabindex="0">
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist">Delivered </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-history-delivered.html">Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="nav-cancelled" role="tabpanel"
+                                    aria-labelledby="nav-cancelled-tab" tabindex="0">
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist ordered-hist3">Cancelled </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="order-cancel.html">Order Details </a></h6>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="tab-pane fade" id="nav-returned" role="tabpanel"
+                                    aria-labelledby="nav-returned-tab" tabindex="0">
+                                    <!-- order history listing -->
+                                    <div class="order-history-cont">
+                                      <div class="ordered-hist ordered-hist4">Returned </div>
+                                      <div class="delivered-num">
+                                        <div class="delivered-date">04/05/2025 <span> | </span>Order No: WH1235864745963
+                                        </div>
+                                        <div class="delivered-amt">Total: $125</div>
+                                      </div>
+                                      <div class="order-dtls-pr">
+                                        <div class="left-order-dtls-pr">
+                                          <div class="ordered-item-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                          <div class="ordered-item-cont">
+                                            <h6>Product 1</h6>
+                                            <p>$125 x 1</p>
+                                          </div>
+                                        </div>
+                                        <div class="right-order-dtls-pr">
+                                          <h6><a href="return-details.html">Order Details </a></h6>
+                                        </div>
+                                      </div>
                                     </div>
                                   </div>
                                 </div>
 
-                                <!-- Content Area -->
-                                <div class="col-lg-9">
-                                    <div class="right-profile">
-                                        <!-- Personal Information -->
-                                        <div class="tab-content" id="pills-tabContent">
-                                          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-                                            <div class="main-profile-list-out">
+                              </div>
+                            </div>
+                          </div>
 
-                                              <div class="main-profile-list">
-                                                <h5 class="mb-4">Profile </h5>
-                                                <div class="row">
-                                                  <div class="col-md-4 main-profile-list-cart-out">
-                                                    <div class="main-profile-list-cart">
-                                                      <svg class="cart-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 13.75 15">
-                                                        <defs>
-                                                          <clipPath id="clip-path">
-                                                            <rect id="Rectangle_8212" data-name="Rectangle 8212" width="13.75" height="15" fill="none"></rect>
-                                                          </clipPath>
-                                                        </defs>
-                                                        <g id="Group_7249" data-name="Group 7249">
-                                                          <path id="Path_38782" data-name="Path 38782" d="M13.125,65.25H.625A.625.625,0,0,1,0,64.586l.625-10A.625.625,0,0,1,1.25,54H12.5a.625.625,0,0,1,.624.586l.625,10a.625.625,0,0,1-.624.664M1.291,64H12.46l-.547-8.75H1.837Z" transform="translate(0 -50.25)" fill="currentcolor"></path>
-                                                          <path id="Path_38783" data-name="Path 38783" d="M51.875,6.25a.625.625,0,0,1-.625-.625v-2.5A1.877,1.877,0,0,0,49.375,1.25h-1.25A1.877,1.877,0,0,0,46.25,3.125v2.5a.625.625,0,0,1-1.25,0v-2.5A3.129,3.129,0,0,1,48.125,0h1.25A3.129,3.129,0,0,1,52.5,3.125v2.5a.625.625,0,0,1-.625.625" transform="translate(-41.875 0)" fill="currentcolor"></path>
-                                                        </g>
-                                                      </svg>
-                                                      <h3>10 Products</h3>
-                                                      <p>In your Cart</p>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-4 main-profile-list-cart-out">
-                                                    <div class="main-profile-list-cart">
-                                                      <i class="fa-regular fa-star"></i>
-                                                      <h3>10 Products</h3>
-                                                      <p>In Wishlist</p>
-                                                    </div>
-                                                  </div>
-                                                  <div class="col-md-4 main-profile-list-cart-out">
-                                                    <div class="main-profile-list-cart">
-                                                      <i class="fa-solid fa-cart-shopping"></i>
-                                                      <h3>10 Products</h3>
-                                                      <p>In your Order</p>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
+                          <!-- Cart -->
+                          <div class="tab-pane fade" id="pills-cart" role="tabpanel" aria-labelledby="pills-cart-tab"
+                            tabindex="0">
+                            <div class="profile-cart-dtls-out">
+                              <div class="profile-cart-dtls">
+                                <h5 class="mb-4">My Cart</h5>
+                              </div>
+                              <div class="prof-cart-items">
 
-                                              <div class="personal-info">
-                                                <h5 class="mb-4">Personal Information</h5>
-                                                <div class="row g-3">
-                                                    <div class="col-md-6">
-                                                        <label class="form-label">First Name</label>
-                                                        <input type="text" class="form-control" value="Alex">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="form-label">Last Name</label>
-                                                        <input type="text" class="form-control" value="Johnson">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="form-label">Email</label>
-                                                        <input type="email" class="form-control" value="alex.johnson@example.com">
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="form-label">Phone</label>
-                                                        <input type="tel" class="form-control" value="+1 (555) 123-4567">
-                                                    </div>
-                                                    <div class="col-12">
-                                                        <label class="form-label">Bio</label>
-                                                        <textarea class="form-control" rows="4">Product designer with 5+ years of experience in creating user-centered digital solutions. Passionate about solving complex problems through simple and elegant designs.</textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            </div>
+                                <div class="card mb-4">
+                                  <div class="card-body">
+                                    <div class="col-md-12 cart-page-out">
+                                      <div class="row justify-content-center align-items-center cart-item mb-3">
+                                        <div class="col-md-2 cart-img-out">
+                                          <div class="cart-img">
+                                            <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                              class="img-fluid rounded">
                                           </div>
-                                          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                                            
-                                          </div>
-                                          <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">789</div>
                                         </div>
+                                        <div class="col-md-4">
+                                          <div class="cart-data">
+                                            <h5 class="card-title">Product 1</h5>
+                                            <p class="text-muted">Category: Electronics</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <div class="cart-incre">
+                                            <div class="input-group position-relative shop-quantity">
+                                              <a href="#" class="shop-down position-absolute"><i
+                                                  class="fa-solid fa-minus"></i></a>
+                                              <input type="number" class="form-control form-control-sm quantity-input"
+                                                value="1" min="1">
+                                              <a href="#" class="shop-up position-absolute"><i
+                                                  class="fa-solid fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 text-end">
+                                          <div class="cart-amnt">
+                                            <p class="fw-bold">$99.99</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 cart-dl-out">
+                                          <button class="btn btn-sm btn-outline-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
 
-                                        <!-- Settings Cards -->
-                                        <!-- <div class="row g-4 mb-4">
+                                    <div class="col-md-12 cart-page-out">
+                                      <div class="row justify-content-center align-items-center cart-item mb-3">
+                                        <div class="col-md-2 cart-img-out">
+                                          <div class="cart-img">
+                                            <img src="assets/img/most-freq-product3.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="cart-data">
+                                            <h5 class="card-title">Product 1</h5>
+                                            <p class="text-muted">Category: Electronics</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <div class="cart-incre">
+                                            <div class="input-group position-relative shop-quantity">
+                                              <a href="#" class="shop-down position-absolute"><i
+                                                  class="fa-solid fa-minus"></i></a>
+                                              <input type="number" class="form-control form-control-sm quantity-input"
+                                                value="1" min="1">
+                                              <a href="#" class="shop-up position-absolute"><i
+                                                  class="fa-solid fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 text-end">
+                                          <div class="cart-amnt">
+                                            <p class="fw-bold">$99.99</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 cart-dl-out">
+                                          <button class="btn btn-sm btn-outline-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div class="col-md-12 cart-page-out">
+                                      <div class="row justify-content-center align-items-center cart-item mb-3">
+                                        <div class="col-md-2 cart-img-out">
+                                          <div class="cart-img">
+                                            <img src="assets/img/most-freq-product4.png" alt="Product 1"
+                                              class="img-fluid rounded">
+                                          </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                          <div class="cart-data">
+                                            <h5 class="card-title">Product 1</h5>
+                                            <p class="text-muted">Category: Electronics</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <div class="cart-incre">
+                                            <div class="input-group position-relative shop-quantity">
+                                              <a href="#" class="shop-down position-absolute"><i
+                                                  class="fa-solid fa-minus"></i></a>
+                                              <input type="number" class="form-control form-control-sm quantity-input"
+                                                value="1" min="1">
+                                              <a href="#" class="shop-up position-absolute"><i
+                                                  class="fa-solid fa-plus"></i></a>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 text-end">
+                                          <div class="cart-amnt">
+                                            <p class="fw-bold">$99.99</p>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2 cart-dl-out">
+                                          <button class="btn btn-sm btn-outline-danger">
+                                            <i class="fa-solid fa-trash"></i>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                              </div>
+                              <!-- <div class="col-lg-12 cart-summary-out">
+                                                <div class="profile-cart-item-in"> -->
+                              <!-- Promo Code -->
+                              <!-- <div class="card promo-code-out">
+                                                      <div class="card-body">
+                                                          <h5>Apply Promo Code</h5>
+                                                          <div class="input-group mb-3">
+                                                              <input type="text" class="form-control" placeholder="Enter promo code">
+                                                              <button class="btn btn-outline-secondary" type="button">Apply</button>
+                                                          </div>
+                                                      </div>
+                                                  </div> -->
+                              <!-- Cart Summary -->
+                              <!-- <div class="card cart-summary">
+                                                      <div class="card-body">
+                                                          <h5 class="card-title mb-4">Order Summary</h5>
+                                                          <div class="d-flex justify-content-between mb-3">
+                                                              <span>Subtotal</span>
+                                                              <span>$199.97</span>
+                                                          </div>
+                                                          <div class="d-flex justify-content-between mb-3">
+                                                              <span>Shipping</span>
+                                                              <span>$10.00</span>
+                                                          </div>
+                                                          <div class="d-flex justify-content-between mb-3">
+                                                              <span>Tax</span>
+                                                              <span>$20.00</span>
+                                                          </div>
+                                                          <hr>
+                                                          <div class="d-flex justify-content-between mb-4">
+                                                              <strong>Total</strong>
+                                                              <strong>$229.97</strong>
+                                                          </div>
+                                                          <button class="btn sec-cart-btn">Proceed to Checkout</button>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                            </div> -->
+                            </div>
+                            <div class="main-btn-out">
+                              <button type="button" class="btn main-btn">Checkout <i
+                                  class="fa-solid fa-arrow-right-long"></i> </button>
+                            </div>
+                          </div>
+
+                          <!-- wishlist -->
+                          <div class="tab-pane fade" id="pills-wishlist" role="tabpanel"
+                            aria-labelledby="pills-wishlist-tab" tabindex="0">
+                            <div class="wish-list-outr">
+                              <div class="profile-cart-dtls">
+                                <h5 class="mb-4">My Wish List</h5>
+                              </div>
+                              <div class="row justify-content-center align-items-center">
+                                <div class="col-lg-12 left-cart-page-out">
+                                  <!-- Cart Items -->
+                                  <div class="card mb-4">
+                                    <div class="card-body">
+                                      <div class="col-md-12 cart-page-out">
+                                        <div class="row justify-content-center align-items-center cart-item mb-3">
+                                          <div class="col-md-2 cart-img-out">
+                                            <div class="cart-img">
+                                              <img src="assets/img/most-freq-product1.png" alt="Product 1"
+                                                class="img-fluid rounded">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="cart-data">
+                                              <h5 class="card-title">Product 1</h5>
+                                              <p class="text-muted">Category: Electronics</p>
+                                              <div class="cart-min-amount">$175 X 1</div>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 cart-dl-out">
+                                            <a href="#" class="btn view-pr-btn">
+                                              Add to Cart
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                              <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-12 cart-page-out">
+                                        <div class="row justify-content-center align-items-center cart-item mb-3">
+                                          <div class="col-md-2 cart-img-out">
+                                            <div class="cart-img">
+                                              <img src="assets/img/most-freq-product3.png" alt="Product 1"
+                                                class="img-fluid rounded">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="cart-data">
+                                              <h5 class="card-title">Product 1</h5>
+                                              <p class="text-muted">Category: Electronics</p>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 cart-dl-out">
+                                            <a href="#" class="btn view-pr-btn">
+                                              Add to Cart
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                              <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-12 cart-page-out">
+                                        <div class="row justify-content-center align-items-center cart-item mb-3">
+                                          <div class="col-md-2 cart-img-out">
+                                            <div class="cart-img">
+                                              <img src="assets/img/most-freq-product2.png" alt="Product 1"
+                                                class="img-fluid rounded">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="cart-data">
+                                              <h5 class="card-title">Product 1</h5>
+                                              <p class="text-muted">Category: Electronics</p>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 cart-dl-out">
+                                            <a href="#" class="btn view-pr-btn">
+                                              Add to Cart
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                              <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <div class="col-md-12 cart-page-out">
+                                        <div class="row justify-content-center align-items-center cart-item mb-3">
+                                          <div class="col-md-2 cart-img-out">
+                                            <div class="cart-img">
+                                              <img src="assets/img/most-freq-product4.png" alt="Product 1"
+                                                class="img-fluid rounded">
+                                            </div>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <div class="cart-data">
+                                              <h5 class="card-title">Product 1</h5>
+                                              <p class="text-muted">Category: Electronics</p>
+                                            </div>
+                                          </div>
+                                          <div class="col-md-6 cart-dl-out">
+                                            <a href="#" class="btn view-pr-btn">
+                                              Add to Cart
+                                            </a>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                              <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <!-- Continue Shopping Button -->
+                                  <div class="continue-shoping">
+                                    <div class="main-btn-out">
+                                      <a href="index.html" class="main-btn">Continue Shoping </a>
+                                    </div>
+                                  </div>
+
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- address -->
+                          <div class="tab-pane fade" id="pills-address" role="tabpanel"
+                            aria-labelledby="pills-address-tab" tabindex="0">
+
+                            <div class="prof-new-address">
+                              <h6>Add New Address</h6>
+                              <button class="btn btn main-btn">Add New</button>
+                            </div>
+
+                            <!--primary address -->
+                            <div class="manage-address">
+                              <h5 class="mb-2">Address 1</h5>
+                              <div class="manage-address-in">
+                                <!-- Personal Details Section -->
+                                <div class="row">
+                                  <div class="col-12">
+                                    <h5>Personal Details </h5>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      John Alexander Smith
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      (555) 123-4567
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      john.smith@email.com
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">State/Province</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Illinois
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">State</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Springfield
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">City</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Springfield
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">ZIP Code</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      62701
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Country</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      United States
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label class="form-label">Street Address</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      123 Main Street, Apartment 4B
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="main-btn-out">
+                                  <a href="#" class="main-btn">Edit </a>
+                                  <a href="#" class="second-btn">Delete </a>
+                                  <a href="#" class="third-btn">Hide </a>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--address 2 -->
+                            <div class="manage-address">
+                              <h5 class="mb-2">Address 2</h5>
+                              <div class="manage-address-in">
+                                <div class="row">
+                                  <div class="col-12">
+                                    <h5>Personal Details </h5>
+                                  </div>
+                                </div>
+                                <div class="row mb-3">
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Full Name</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      John Alexander Smith
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      (555) 123-4567
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Email Address</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      john.smith@email.com
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">State/Province</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Illinois
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">State</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Springfield
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">City</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      Springfield
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">ZIP Code</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      62701
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4 mb-3">
+                                    <label class="form-label">Country</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      United States
+                                    </div>
+                                  </div>
+                                  <div class="col-12">
+                                    <label class="form-label">Street Address</label>
+                                    <div class="form-control-plaintext bg-light p-2 rounded">
+                                      123 Main Street, Apartment 4B
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="main-btn-out">
+                                  <a href="#" class="main-btn">Edit </a>
+                                  <a href="#" class="second-btn">Delete </a>
+                                  <a href="#" class="third-btn">Hide </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <!-- change password -->
+                          <div class="tab-pane fade" id="pills-password" role="tabpanel"
+                            aria-labelledby="pills-password-tab" tabindex="0">
+                            <div class="change-password">
+                              <h5 class="mb-4">Change Password</h5>
+                              <form class="change-password-form">
+                                <div class="form-group mb-3">
+                                  <label for="password">Password</label>
+                                  <input type="password" id="password" name="password" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                  <label for="password">Confirm Password</label>
+                                  <input type="password" id="confirmPassword" name="password" required>
+                                </div>
+                                <button type="submit" class="btn main-btn py-2">Update</button>
+                              </form>
+                            </div>
+                          </div>
+
+                        </div>
+
+                        <!-- Settings Cards -->
+                        <!-- <div class="row g-4 mb-4">
                                             <div class="col-md-6">
                                                 <div class="settings-card card">
                                                     <div class="card-body">
@@ -566,8 +1372,8 @@
                                             </div>
                                         </div> -->
 
-                                        <!-- Recent Activity -->
-                                        <!-- <div>
+                        <!-- Recent Activity -->
+                        <!-- <div>
                                             <h5 class="mb-4">Recent Activity</h5>
                                             <div class="activity-item mb-3">
                                                 <h6 class="mb-1">Updated profile picture</h6>
@@ -582,42 +1388,42 @@
                                                 <p class="text-muted small mb-0">3 days ago</p>
                                             </div>
                                         </div> -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        <!-- </div> -->
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
     </div>
-    </div>
-</div>
-</section>
+  </section>
 
 
-<section class="custom-full-pr">
-  <div class="width-container h-100">
-    <div class="custom-full-pr-cont">
-      <button class="btn">CUSTOMER LOVED, BEST SELLING</button>
-      <h2>Signature Makeup Products</h2>
-      <p>Explore our soft, vegan, high quality brushes that offer precision and control.</p>
+  <section class="custom-full-pr">
+    <div class="width-container h-100">
+      <div class="custom-full-pr-cont">
+        <button class="btn">CUSTOMER LOVED, BEST SELLING</button>
+        <h2>Signature Makeup Products</h2>
+        <p>Explore our soft, vegan, high quality brushes that offer precision and control.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="home-pr-search">
-  <div class="width-container">
-    <div class="home-pr-search-innr">
-      <h3>Receive 15% off your first order</h3>
-      <p>No spam, just the good stuff. Pinky promise.</p>
-      <form>
-        <input class="form-control" type="search" placeholder="Email Address" aria-label="Search">
-        <button class="btn" type="submit">Subscribe </button>
-      </form>
+  <section class="home-pr-search">
+    <div class="width-container">
+      <div class="home-pr-search-innr">
+        <h3>Receive 15% off your first order</h3>
+        <p>No spam, just the good stuff. Pinky promise.</p>
+        <form>
+          <input class="form-control" type="search" placeholder="Email Address" aria-label="Search">
+          <button class="btn" type="submit">Subscribe </button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <section class="footer">
@@ -639,50 +1445,50 @@
 
           <div class="col-md-12 col-lg-8 footer-nav-out-all">
             <div class="row">
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
-              <div class="footer-nav">
-                <h5>Information</h5>
-                <ul>
-                  <li><a href="#">Home </a></li>
-                  <li><a href="#">About us </a></li>
-                  <li><a href="#">Our Blog </a></li>
-                  <li><a href="#">Start a Return </a></li>
-                  <li><a href="#">Contact Us </a></li>
-                  <li><a href="#">Shipping FAQ </a></li>
-                </ul>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
+                <div class="footer-nav">
+                  <h5>Information</h5>
+                  <ul>
+                    <li><a href="#">Home </a></li>
+                    <li><a href="#">About us </a></li>
+                    <li><a href="#">Our Blog </a></li>
+                    <li><a href="#">Start a Return </a></li>
+                    <li><a href="#">Contact Us </a></li>
+                    <li><a href="#">Shipping FAQ </a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 footer-nav-out pr-nav-out">
-              <div class="footer-nav">
-                <h5>Products </h5>
-                <ul>
-                  <li><a href="#">Neem comb </a></li>
-                  <li><a href="#">Natural loofah </a></li>
-                  <li><a href="#">Foot scrubber </a></li>
-                  <li><a href="#">Pumice stone </a></li>
-                  <li><a href="#">Nose strips </a></li>
-                  <li><a href="#">Lip sheet mask </a></li>
-                  <li><a href="#">Under eye sheet mask </a></li>
-                  <li><a href="#">Body and face wax strips </a></li>
-                  <li><a href="#">Acne pimple patches strip </a></li>
-                </ul>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 footer-nav-out pr-nav-out">
+                <div class="footer-nav">
+                  <h5>Products </h5>
+                  <ul>
+                    <li><a href="#">Neem comb </a></li>
+                    <li><a href="#">Natural loofah </a></li>
+                    <li><a href="#">Foot scrubber </a></li>
+                    <li><a href="#">Pumice stone </a></li>
+                    <li><a href="#">Nose strips </a></li>
+                    <li><a href="#">Lip sheet mask </a></li>
+                    <li><a href="#">Under eye sheet mask </a></li>
+                    <li><a href="#">Body and face wax strips </a></li>
+                    <li><a href="#">Acne pimple patches strip </a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
-              <div class="footer-nav">
-                <h5>Useful links </h5>
-                <ul>
-                  <li><a href="#">My Account </a></li>
-                  <li><a href="#">Print Provider </a></li>
-                  <li><a href="#">Become a Partner </a></li>
-                  <li><a href="#">Custom Products </a></li>
-                  <li><a href="#">Make your own  </a></li>
-                </ul>
+              <div class="col-sm-6 col-md-6 col-lg-6 col-xl-3 footer-nav-out">
+                <div class="footer-nav">
+                  <h5>Useful links </h5>
+                  <ul>
+                    <li><a href="#">My Account </a></li>
+                    <li><a href="#">Print Provider </a></li>
+                    <li><a href="#">Become a Partner </a></li>
+                    <li><a href="#">Custom Products </a></li>
+                    <li><a href="#">Make your own </a></li>
+                  </ul>
+                </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
         </div>
       </div>
     </div>
@@ -714,7 +1520,7 @@
   </section>
 
 
-<!-- </div> -->
+  <!-- </div> -->
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.bundle.js"></script>
@@ -732,6 +1538,78 @@
   <script>
     AOS.init();
   </script>
+
+  <script>
+    $('.disable-field').prop('disabled', true);
+    $('#elementId').click(function () {
+      $('.disable-field').prop('disabled', true);
+    });
+
+    $('#reset').click(function () {
+      $('.disable-field').prop('disabled', false);
+    });
+  </script>
+  <script>
+        function selectImage() {
+            document.getElementById('imageInput').click();
+        }
+        
+        function handleImageSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Check file size (5MB limit)
+                if (file.size > 5 * 1024 * 1024) {
+                    alert('File size must be less than 5MB');
+                    return;
+                }
+                
+                // Check file type
+                if (!file.type.startsWith('image/')) {
+                    alert('Please select a valid image file');
+                    return;
+                }
+                
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const profileImage = document.getElementById('profileImage');
+                    profileImage.src = e.target.result;
+                    
+                    // Show success message
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.classList.add('show');
+                    setTimeout(() => {
+                        successMessage.classList.remove('show');
+                    }, 3000);
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        // Optional: Add drag and drop functionality
+        const profileHead = document.querySelector('.profile-head-dtls');
+        
+        profileHead.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.style.opacity = '0.7';
+        });
+        
+        profileHead.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.style.opacity = '1';
+        });
+        
+        profileHead.addEventListener('drop', function(e) {
+            e.preventDefault();
+            this.style.opacity = '1';
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                const imageInput = document.getElementById('imageInput');
+                imageInput.files = files;
+                handleImageSelect({ target: imageInput });
+            }
+        });
+    </script>
 
 </body>
 

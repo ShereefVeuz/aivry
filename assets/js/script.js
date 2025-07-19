@@ -188,57 +188,152 @@ dropdownToggles.forEach(toggle => {
 //   })
   // close
 
-  $(document).ready(function(){
-      var $carousel = $('.top-products  .owl-carousel');
-      var $currentItem = $('.current-item');
-      var $totalItems = $('.total-items');
-      var totalItems = $carousel.children().length;
+  // $(document).ready(function(){
+  //     var $carousel = $('.top-products  .owl-carousel');
+  //     var $currentItem = $('.current-item');
+  //     var $totalItems = $('.total-items');
+  //     var totalItems = $carousel.children().length;
       
-      $totalItems.text(totalItems);
+  //     $totalItems.text(totalItems);
       
-      $carousel.owlCarousel({
-        items: 7, // Show 7 items at once
-        margin: 15,
-        dots: true,
-        autoplay: false,
-        dotsEach: true, // Show a dot for each item
-        loop: true,
-        onInitialized: updateCounter,
-        onChanged: updateCounter
-      });
+  //     $carousel.owlCarousel({
+  //       items: 7, // Show 7 items at once
+  //       margin: 15,
+  //       dots: true,
+  //       autoplay: false,
+  //       dotsEach: true, // Show a dot for each item
+  //       loop: true,
+  //       onInitialized: updateCounter,
+  //       onChanged: updateCounter
+  //     });
       
-      function updateCounter(event) {
-        // Update current position counter
-        var currentPosition = event.item.index + 1;
-        $currentItem.text(currentPosition);
+  //     function updateCounter(event) {
+  //       // Update current position counter
+  //       var currentPosition = event.item.index + 1;
+  //       $currentItem.text(currentPosition);
+  //     }
+  // });
+
+
+  // top-products
+  $(document).ready(function () {
+  var $carousel = $('.top-products .owl-carousel');
+  var $currentItem = $('.current-item');
+  var $totalItems = $('.total-items');
+
+  var totalItems = $carousel.children().length;
+  $totalItems.text(totalItems);
+
+  $carousel.owlCarousel({
+    items: 7, // default value
+    margin: 15,
+    dots: true,
+    autoplay: false,
+    dotsEach: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 2
+      },
+      400: {
+        items: 3
+      },
+      600: {
+        items: 4
+      },
+      900: {
+        items: 4
+      },
+      1000: {
+        items: 5
+      },
+      1300: {
+        items: 8
       }
+    },
+    onInitialized: updateCounter,
+    onChanged: updateCounter
   });
 
+  function updateCounter(event) {
+    var currentPosition = event.item.index + 1;
+    $currentItem.text(currentPosition);
+  }
+});
+
+
+// top-categories
+// $(document).ready(function(){
+//       var $carousel2 = $('.top-categories .owl-carousel');
+//       var $currentItem2 = $('.current-item');
+//       var $totalItems2 = $('.total-items');
+//       var totalItems2 = $carousel2.children().length;
+      
+//       $totalItems2.text(totalItems2);
+      
+//       $carousel2.owlCarousel({
+//         items: 4, // Show 7 items at once
+//         margin: 15,
+//         dots: true,
+//         autoplay: false,
+//         dotsEach: true, // Show a dot for each item
+//         loop: true,
+//         onInitialized: updateCounter,
+//         onChanged: updateCounter
+//       });
+      
+//       function updateCounter(event) {
+//         // Update current position counter
+//         var currentPosition2 = event.item.index + 1;
+//         $currentItem2.text(currentPosition2);
+//       }
+//   });
+
 $(document).ready(function(){
-      var $carousel2 = $('.top-categories .owl-carousel');
-      var $currentItem2 = $('.current-item');
-      var $totalItems2 = $('.total-items');
-      var totalItems2 = $carousel2.children().length;
-      
-      $totalItems2.text(totalItems2);
-      
-      $carousel2.owlCarousel({
-        items: 4, // Show 7 items at once
-        margin: 15,
-        dots: true,
-        autoplay: false,
-        dotsEach: true, // Show a dot for each item
-        loop: true,
-        onInitialized: updateCounter,
-        onChanged: updateCounter
-      });
-      
-      function updateCounter(event) {
-        // Update current position counter
-        var currentPosition2 = event.item.index + 1;
-        $currentItem2.text(currentPosition2);
+  var $carousel2 = $('.top-categories .owl-carousel');
+  var $currentItem2 = $('.current-item');
+  var $totalItems2 = $('.total-items');
+  var totalItems2 = $carousel2.children().length;
+  
+  $totalItems2.text(totalItems2);
+
+  $carousel2.owlCarousel({
+    items: 4, // default
+    margin: 15,
+    dots: true,
+    autoplay: false,
+    dotsEach: true,
+    loop: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      400: {
+        items: 2
+      },
+      780: {
+        items: 2
+      },
+      900: {
+        items: 3
+      },
+      1000: {
+        items: 3
+      },
+      1300: {
+        items: 4
       }
+    },
+    onInitialized: updateCounter,
+    onChanged: updateCounter
   });
+
+  function updateCounter(event) {
+    var currentPosition2 = event.item.index + 1;
+    $currentItem2.text(currentPosition2);
+  }
+});
+
 
 // END section scrolling
 
@@ -315,7 +410,7 @@ $('.most-freq .owl-carousel').owlCarousel({
         items: 2
       },
       780: {
-        items: 2
+        items: 3
       },
       1300: {
         items: 4
@@ -383,7 +478,6 @@ function controlFromInput(fromSlider, fromInput, toInput, controlSlider) {
     fromSlider.value = from;
   }
 }
-
 // Controls the slider using to Input....
 function controlToInput(toSlider, fromInput, toInput, controlSlider) {
   const [from, to] = getParsed(fromInput, toInput);
@@ -399,7 +493,6 @@ function controlToInput(toSlider, fromInput, toInput, controlSlider) {
     toInput.value = from;
   }
 }
-
 // Sliding event of the From slider
 function controlFromSlider(fromSlider, toSlider, fromInput) {
   const [from, to] = getParsed(fromSlider, toSlider);
@@ -411,7 +504,6 @@ function controlFromSlider(fromSlider, toSlider, fromInput) {
     toInput.value = from;
   }
 }
-
 // Sliding event of the To slider
 function controlToSlider(fromSlider, toSlider, toInput) {
   const [from, to] = getParsed(fromSlider, toSlider);
@@ -424,14 +516,12 @@ function controlToSlider(fromSlider, toSlider, toInput) {
     toInput.value = from;
   }
 }
-
 // Parsign values of the Inputs
 function getParsed(currentFrom, currentTo) {
   const from = parseInt(currentFrom.value, 10);
   const to = parseInt(currentTo.value, 10);
   return [from, to];
 }
-
 // Changing and Filling the color in the selected part...
 function fillSlider(from, to, sliderColor, rangeColor, controlSlider) {
   let rangeDistance = to.max - to.min;
@@ -461,7 +551,6 @@ function setToggleAccessible(currentTarget) {
     toSlider.style.zIndex = 0;
   }
 }
-
 const fromSlider = document.querySelector("#fromSlider");
 const toSlider = document.querySelector("#toSlider");
 const fromInput = document.querySelector("#fromInput");
@@ -523,5 +612,13 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+
+
+
+
+
+
+
 
 
