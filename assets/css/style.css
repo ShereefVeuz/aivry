@@ -958,7 +958,7 @@ input[type=number] {
 /* ----------- start top-products ----------------*/
 .top-products {
     position: relative;
-    padding: 100px 0 0px;
+    padding: 80px 0 0px;
 }
 
 .top-products .carousel-wrap {
@@ -1046,7 +1046,7 @@ input[type=number] {
 	display: flex;
 	justify-content: center;
 	margin-top: 30px;
-	height: 4px;
+	height: 3px;
 	background: #BDBDBD;
 	width: 65%;
 	position: absolute;
@@ -1075,7 +1075,7 @@ input[type=number] {
 
 .top-products .owl-dot.active span {
 	background: #869791;
-	height: 4px;
+	height: 3px;
 	top: 0px;
 }
 
@@ -1192,6 +1192,9 @@ input[type=number] {
 	padding: 20px;
 	background: #f6f6f6;
 }
+.top-categories .owl-carousel .item:hover{
+	background-color: var(--secondary-color);
+}
 .top-categories .owl-carousel .item h6 {
 	font-size: 14px;
   	font-weight: 400;
@@ -1272,16 +1275,46 @@ input[type=number] {
 	font-weight: 400;
 }
 
+
+
+/* swap image */
+.swap-on-hover {
+  position: relative;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.swap-on-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+}
+
+.swap-on-hover .swap-on-hover__front-image {
+  z-index: 2;
+  transition: opacity 0.5s linear;
+  cursor: pointer;
+}
+
+.swap-on-hover:hover > .swap-on-hover__front-image {
+  opacity: 0;
+}
+/* end swap image */
+
+
+
 .top-categories-item-bg {
 	height: 300px;
 	margin-top: 20px;
 }
-.top-categories-item-bg img{
+/* .top-categories-item-bg img{
 	width: 100%;
 	height: 100%;
 	border-radius: 20px;
 	object-fit: cover;
-}
+} */
 
 .right-item-content button,
 .right-item-content a{
@@ -1295,8 +1328,14 @@ input[type=number] {
 	align-items: center;
 }
 .right-item-content button svg,
-.right-item-content a svg{
-	rotate: -30deg;
+.right-item-content a svg {
+  transform: rotate(-30deg);
+  transition: transform 0.3s ease;
+}
+
+.top-categories .owl-carousel .item:hover .right-item-content button svg,
+.top-categories .owl-carousel .item:hover .right-item-content a svg {
+  transform: rotate(0deg);
 }
 .right-item-content button a,
 .right-item-content a{
@@ -1443,14 +1482,14 @@ input[type=number] {
 	display: flex;
 	justify-content: center;
 	margin-top: 50px;
-	height: 4px;
+	height: 3px;
 	background: #BDBDBD;
 	width: 90%;
 }
 
 .top-categories .owl-dot {
 	flex: 1;
-	height: 4px;
+	height: 3px;
 	position: relative;
 	margin: 0;
 	padding: 0;
@@ -1459,7 +1498,7 @@ input[type=number] {
 .top-categories .owl-dot span {
 	display: block !important;
 	width: 100%;
-	height: 4px;
+	height: 3px;
 	background: transparent;
 	position: absolute;
 	top: 0;
@@ -1469,7 +1508,7 @@ input[type=number] {
 
 .top-categories .owl-dot.active span {
 	background: #869791;
-	height: 4px;
+	height: 3px;
 	top: 0px;
 }
 
@@ -1496,6 +1535,8 @@ input[type=number] {
 /* ----------- main products banner ----------------*/
 .big-banner{
 	padding: 50px 0 0;
+	position: relative;
+	overflow: hidden;
 }
 
 .big-banner-inner .carousel-wrap {
@@ -1550,8 +1591,9 @@ input[type=number] {
 /* ----------- most-freq ----------------*/
 .most-freq {
 	padding: 60px 0;
+	position: relative;
+	overflow: hidden;
 }
-
 .most-freq-inner .carousel-wrap {
     position: relative;
 }
@@ -1641,12 +1683,10 @@ input[type=number] {
 
 /* ----------- home-shiping --------------- */
 .home-shiping{
-	padding: 60px 0;
+	padding: 80px 0;
 	background-color: var(--white-color);
-}
-
-.home-shiping-item{
-	margin-top: 20px;
+	position: relative;
+	overflow: hidden;
 }
 
 .home-shiping-cont{
@@ -1701,12 +1741,62 @@ input[type=number] {
 	margin-bottom: 35px;
 }
 
-.bottom-border1{
+/* .bottom-border1{
 	width: 35%;
 	height: 4px;
 	background-color: #889C9B;
 	margin: 20px 0;
 }
+
+.mkp-products-item-bg{
+	display: flex;
+}
+.mkp-products-item-bg1{
+	height: 500px;
+	overflow: hidden;
+}
+.mkp-products-item-bg2{
+	height: 500px;
+	overflow: hidden;
+}
+.mkp-products-item-bg1 img,
+.mkp-products-item-bg2 img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+} */
+ .mkp-products-item-bg {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.mkp-products-item-bg1 img,
+.mkp-products-item-bg2 img {
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%; /* Optional - can also use max-width */
+  height: 100%;
+}
+
+.mkp-products-item-bg1 {
+  position: relative;
+  z-index: 2;
+  transform: rotate(-2deg);
+  height: 500px;
+}
+
+.mkp-products-item-bg2 {
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  z-index: 1;
+  transform: rotate(4deg);
+  height: 500px;
+}
+
 /* ----------- hmkp products --------------- */
 
 
