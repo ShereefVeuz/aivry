@@ -261,6 +261,7 @@ a {
 }
 
 .nav-cart .offcanvas-body {
+	padding: 0;
 	background-color: #fff !important;
 }
 
@@ -274,7 +275,7 @@ a {
 }
 
 .nav-cart .table tr:nth-child(odd) {
-  background-color: #f9f9f90d !important; 
+  background-color: #d5d5d52e !important; 
 }
 
 .nav-cart .table tr:nth-child(even) {
@@ -295,10 +296,11 @@ a {
   align-items: center;
   justify-content: center;
   justify-content: center;
-  color: #324546;
+  color: var(--white-color);
   cursor: pointer;
   z-index: 10;
   border: 1px solid #3245463b;
+  background-color: var(--main-color);
 }
 .shop-quantity .shop-down:hover,
 .shop-quantity .shop-up:hover{
@@ -339,17 +341,17 @@ a {
 }
 .clear-product i,
 .clear-product svg{
-	border: 1px solid #324546;
+	border: 1px solid #32454636;
 	border-radius: 50px;
 	padding: 2px 4px;
 	border-radius: 5px;
-	color: #324546;
+	color: #324546ba;
 }
 .clear-product i:hover,
 .clear-product svg:hover{
 	color: white;
-	background-color: #b00;
-	border: #b00;
+	background-color: #324546;
+	border: #324546;
 }
 
 .cart-amt-text-out p .cross-amt{
@@ -382,11 +384,9 @@ a {
 .cart-btn-out .main-btn {
   padding: 14px 30px;
   width: 50%;
-  border-radius: 0;
 }
 .cart-btn-out .second-btn{
 	width: 50%;
-	border-radius: 0;
 }
 .cart-btn-out .second-btn svg {
   font-size: 18px;
@@ -470,7 +470,7 @@ input[type=number] {
 }
 
 .profile-login .form-control:focus {
-	border-color: #2EBB77;
+	border-color: var(--main-color);
 	background: white;
 	transform: translateY(-1px);
 	box-shadow: none;
@@ -856,6 +856,9 @@ input[type=number] {
   line-height: 25px;
   color: var(--white-color);
 }
+.banner_slider .carousel-caption .main-btn{
+	padding: 14px 30px;
+}
 .banner_slider .carousel-caption .main-btn:hover{
 	color: var(--black-color);
 	background-color: var(--secondary-color);
@@ -1125,7 +1128,7 @@ input[type=number] {
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--white-color);
-	padding: 14px 30px;
+	padding: 10px 30px;
   	border-radius: 7px;
 	background-color: var(--black-color);
 }
@@ -1137,7 +1140,7 @@ input[type=number] {
 .second-btn{
 	font-size: 16px;
 	font-weight: 500;
-	padding: 12px 30px;
+	padding: 10px 30px;
 	color: var(--white-color);
 	background-color: var(--main-color);
 	border-radius: 7px;
@@ -1158,7 +1161,7 @@ input[type=number] {
 	font-size: 16px;
 	font-weight: 500;
 	color: var(--black-color);
-	padding: 12px 30px;
+	padding: 10px 30px;
 	background-color: var(--secondary-color);
 	display: flex;
 	align-items: center;
@@ -1901,11 +1904,13 @@ input[type=number] {
 	justify-content: center;
 }
 
-.custom-full-pr-cont .custom-loved {
+.custom-full-pr-cont .custom-loved,
+.custom-full-pr-cont button {
 	padding: 12px 35px;
 	border-radius: 50px;
 	color: var(--main-color);
 	background-color: var(--white-color);
+	cursor: auto;
 }
 
 .custom-full-pr-cont h2 {
@@ -2008,24 +2013,38 @@ input[type=number] {
 
 .left-cart-page-out .card,
 .left-cart-page-out .card-body{
-	border-radius: 10px;
+	border-radius: 0 0 10px 10px;
 }
 
 .cart-page-out {
   border-bottom: 1px solid #e1e2e3de;
-  margin-top: 15px;
+  margin-bottom: 15px;
+  position: relative;
 }
 .cart-page-out:last-child {
 	border-bottom: 0;
 }
 
+.left-cart-page-out .common-headding {
+	background-color: var(--main-color);
+  	border-radius: 10px 10px 0 0;
+	padding: 15px;
+}
+.left-cart-page-out .common-headding h2{
+	font-size: 25px;
+	font-weight: 500;
+	color: white;
+}
+
 .cart-img{
 	height: 125px;
 	overflow: hidden;
+	background-color: #f7f7f7a6;
 }
 .cart-img img {
      width: 100%;
      height: 100%;
+	 object-fit: contain;
  }
 
 .cart-data h5{
@@ -2120,10 +2139,10 @@ input[type=number] {
 	/* border: 1px solid rgb(46, 187, 119); */
 }
 
-.continue-shoping{
+/* .continue-shoping{
 	display: inline-block;
 	margin-top: 10px;
-}
+} */
 .continue-shoping .main-btn-out{
 	display: inline-block;
 }
@@ -2142,7 +2161,7 @@ input[type=number] {
 	font-size: 14px;
 	font-weight: 500;
 	color: var(--white-color);
-	background-color: var(--black-color);
+	background-color: var(--main-color);
 	border: 0;
 }
 .view-pr-btn:hover{
@@ -2743,7 +2762,7 @@ input[type=number] {
 .pr-dtls-quntity .shop-down{
 	left: -1px;
 }
-.pr-dtls-quntity .shop-quantity{
+.exzoom:hover .pr-dtls-quntity .cart-incre .input-group{
 	z-index: -1;
 }
 
@@ -3093,6 +3112,9 @@ input[type=number] {
 .profile-head-dtls-out{
 	text-align: center;
 }
+.profile-head-dtls-out p{
+	font-size: 14px;
+}
 .profile-header-out{
 	margin-bottom: 20px;
 }
@@ -3103,15 +3125,6 @@ input[type=number] {
 	background-color: #889c9b;
   	border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* .profile-head-dtls {
@@ -3220,8 +3233,6 @@ input[type=number] {
     margin-left: -3.5em;
 }
 
-
-
 /*right profile*/
 .right-profile{
 	padding: 40px 50px;
@@ -3245,7 +3256,7 @@ input[type=number] {
 	font-size: 15px;
 	border: 1px solid rgb(136, 156, 155);
 	border-radius: 5px;
-	background-color: rgb(240, 241, 227);
+	/* background-color: rgb(240, 241, 227); */
 }
 .right-profile input:active,
 .right-profile input:focus{
@@ -3330,41 +3341,35 @@ input[type=number] {
 	font-size: 15px;
 	padding: 10px;
 }
-        
-        #imageInput::-webkit-file-upload-button {
-            background-color: var(--main-color);
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        
-        #imageInput::-webkit-file-upload-button:hover {
-            background-color: var(--main-color);
-        }
-        
-        /* For Firefox */
-        #imageInput::file-selector-button {
-            background-color: var(--main-color);
-            color: white;
-            padding: 8px 16px;
-            border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            margin-right: 10px;
-        }
-        
-        #imageInput::file-selector-button:hover {
-            background-color: var(--main-color);
-        }
 
+#imageInput::-webkit-file-upload-button {
+	background-color: var(--main-color);
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 10px;
+}
 
+#imageInput::-webkit-file-upload-button:hover {
+	background-color: var(--main-color);
+}
 
+/* For Firefox */
+#imageInput::file-selector-button {
+	background-color: var(--main-color);
+	color: white;
+	padding: 8px 16px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	margin-right: 10px;
+}
 
-
-
+#imageInput::file-selector-button:hover {
+	background-color: var(--main-color);
+}
 
 
 /* cart */
@@ -3403,6 +3408,12 @@ input[type=number] {
 .main-profile-list-cart svg{
 	font-size: 30px;
 	margin-bottom: 6px;
+}
+
+#pills-cart .main-btn-out,
+#pills-wishlist .main-btn-out {
+	display: flex;
+  	justify-content: end;
 }
 
 
@@ -3552,6 +3563,20 @@ input[type=number] {
 }
 
 /* change password */
+/* profile login */
+.change-password {
+	padding: 50px;
+	border-radius: 12px;
+	background-color: var(--secondary-color);
+}
+.change-password h5{
+	font-size: 25px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.change-password-form .form-group{
+	position: relative;
+}
 .change-password-form label{
 	font-size: 16px;
 	font-weight: 500;
@@ -3563,7 +3588,27 @@ input[type=number] {
 	font-size: 14px;
 	border: 1px solid #889c9b;
 	border-radius: 5px;
+	width: 100%;
+	background-color: var(--secondary-color);
 }
+.change-password-form .input-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 18px;
+  pointer-events: none;
+  margin-top: 12px;
+}
+.change-password .main-btn-out {
+  justify-content: center;
+}
+.change-password .main-btn {
+	padding: 14px 30px;
+}
+
+
 
 /* address manage */
 .manage-address{
@@ -3598,6 +3643,13 @@ input[type=number] {
   background-color: #f0f1e3;
   margin-bottom: 25px;
 }
+.prof-new-address h6{
+	font-size: 20px;
+	margin-bottom: 0;
+}
+.second-btn {
+  padding: 8px 30px;
+}
 
 .manage-address-in .main-btn-out{
 	margin-top: 20px;
@@ -3606,6 +3658,20 @@ input[type=number] {
   background-color: var(--main-color);
   border-radius: 6px;
 }
+
+
+/* profile cart */
+.profile-page-cartsec .cart-img-out .cart-incre,
+.profile-page-cartsec .prf-cart-incre .cart-amnt,
+.profile-page-cartsec .prf-cart-data button {
+	display: none;
+}
+
+/* profile wishlist */
+.profile-page-wishlistsec .prf-cart-data .cart-dl-out {
+	display: none;
+}
+
 
 
 /* ---------------------------------

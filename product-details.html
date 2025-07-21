@@ -437,9 +437,6 @@
         <div class="col-md-5 mb-4">
           <div class="first-pr-dtls-slide">
           <div class="pr-dtls-slide">
-
-
-
             <div class="exzoom hidden" id="exzoom">
               <div class="exzoom_img_box">
                   <ul class='exzoom_img_ul'>
@@ -483,12 +480,6 @@
                 </div>
               </div>        
             </div> -->
-
-
-
-
-
-
             <!-- <img src="assets/img/most-freq-product1.png" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
             <div class="pr-dtl-small-img">
                 <img src="assets/img/most-freq-product1.png" alt="Thumbnail 1" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
@@ -2026,6 +2017,21 @@ $('.container').imagesLoaded( function() {
 });
 
 });
+  </script>
+
+
+<script>
+  // products details incre decre hide
+  $('#exzoom').hover(
+    function () {
+      console.log('Hover In');
+      $('.cart-incre .input-group').css('z-index', '-1');
+    },
+    function () {
+      console.log('Hover Out');
+      $('.cart-incre .input-group').css('z-index', 'auto');
+    }
+  );
   </script>
 
 
