@@ -1278,6 +1278,37 @@ input[type=number] {
 
 
 /* swap image */
+/* .swap-on-hover {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.swap-on-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swap-on-hover__front-image {
+  z-index: 2;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.swap-on-hover__back-image {
+  z-index: 1;
+}
+
+.swap-on-hover:hover .swap-on-hover__front-image {
+  opacity: 0;
+} */
+
 .swap-on-hover {
   position: relative;
   margin: 0 auto;
@@ -1602,6 +1633,15 @@ input[type=number] {
     position: relative;
     z-index: 2;
     -webkit-backface-visibility: hidden;
+	border-radius: 10px;
+	transition: transform 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+.most-freq-inner .owl-carousel .item:hover {
+	background-color: var(--white-color);
+}
+.most-freq-inner .owl-carousel .item:hover .most-freq-item-bg img{
+	border-radius: 10px 10px 0 0;
 }
 
 .most-freq-inner .owl-nav>div {
@@ -1633,6 +1673,7 @@ input[type=number] {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	transition: background-color 0.3s ease;
 }
 
 .most-freq-item-cont{
@@ -1647,6 +1688,7 @@ input[type=number] {
 	color: var(--black-color);
 	line-height: 23px;
 	margin-bottom: 2px;
+	padding-right: 5px;
 }
 .left-most-freq-item-cont h6:hover,
 .left-most-freq-item-cont h6 a:hover {
@@ -1695,25 +1737,31 @@ input[type=number] {
   	background-color: var(--secondary-color);
 	height: 100%;
 }
-
+.home-shiping-cont:hover{
+	background-color: var(--main-color);
+}
 .home-shiping-img{
 	width: 60px;
 	margin: 0 auto 10px auto;
 }
-
 .home-shiping-cont h3{
 	font-size: 20px;
 	font-weight:400;
 	color: var(--black-color);
 	text-align: center;
 }
-
+.home-shiping-cont:hover h3{
+	color: var(--white-color);
+}
 .home-shiping-cont p{
 	font-size: 14px;
 	font-weight:400;
 	color: #7c9998;
 	text-align: center;
 	margin-bottom: 0;
+}
+.home-shiping-cont:hover p{
+	color: var(--white-color);
 }
 /* ----------- END home-shiping --------------- */
 
@@ -1768,16 +1816,17 @@ input[type=number] {
 } */
  .mkp-products-item-bg {
   position: relative;
-  width: fit-content;
-  margin: 0 auto;
+  /* width: fit-content;
+  margin: 0 auto; */
+  width: 100%;
 }
 
 .mkp-products-item-bg1 img,
 .mkp-products-item-bg2 img {
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); */
   transition: all 0.3s ease;
-  width: 100%; /* Optional - can also use max-width */
+  width: 100%; 
   height: 100%;
 }
 
@@ -1785,16 +1834,26 @@ input[type=number] {
   position: relative;
   z-index: 2;
   transform: rotate(-2deg);
+  transition: transform 0.3s ease;
   height: 500px;
+  width: 350px;
 }
 
 .mkp-products-item-bg2 {
   position: absolute;
   top: 20px;
-  left: 40px;
+  right: 40px;
   z-index: 1;
   transform: rotate(4deg);
+  transition: transform 0.3s ease;
   height: 500px;
+}
+
+.mkp-products-item-bg:hover .mkp-products-item-bg1 {
+  transform: rotate(0deg);
+}
+.mkp-products-item-bg:hover .mkp-products-item-bg2 {
+  transform: rotate(-4deg);
 }
 
 /* ----------- hmkp products --------------- */
@@ -2323,16 +2382,13 @@ input[type=number] {
 .filter-group {
 	margin-bottom: 25px;
 }
-.filter-group .form-check{
-	margin-bottom: 10px;
-}
 .filter-group h6{
 	font-size: 18px;
 	font-weight: 500;
 	margin-bottom: 15px;
 }
 .filter-group .form-check label{
-	font-size: 14px;
+	font-size: 16px;
 }
 .filter-group input:active,
 .filter-group input:focus{
@@ -2340,34 +2396,38 @@ input[type=number] {
 	box-shadow: none !important;
 	box-shadow: none;
   	outline: none;
+	border: 2px solid #ccc;
 }
-.filter-group input[type="checkbox"] {
+
+/* Hide the default checkbox appearance */
+.form-check-input {
   appearance: none;
   -webkit-appearance: none;
   width: 20px;
   height: 20px;
-  border: 2px solid #ccc;
+  border: 2px solid #889c9b;
   border-radius: 4px;
+  background-color: #fff; 
   cursor: pointer;
   position: relative;
-  margin-top: 0;
-  margin-right: 5px;
-  box-shadow: none;
-  outline: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
 }
-/* .filter-group input[type="checkbox"]:checked {
-  background-color: #889c9b; 
-  border-color: #889c9b;
-  box-shadow: none;
-  outline: none;
-} */
- .filter-group input:active,
- .filter-group input:focus {
-  background-color: #889c9b; 
-  border-color: #889c9b;
-  box-shadow: none;
-  outline: none;
+.form-check-input:checked {
+  background-color: #889c9b;
+  border-color: #889c9b !important;
 }
+.form-check-input:checked::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
 
 /*range*/
 .filter-group-range .range_container {
@@ -4291,14 +4351,6 @@ input[type=number] {
 
 .payment-details.show {
 	display: block;
-}
-
-.form-check-input:checked,
-.form-check-input:focus {
-	background-color: #889c9b !important;
-	border-color: #889c9b;
-	box-shadow: none;
-	outline: none;
 }
 
 .upi-logo {
