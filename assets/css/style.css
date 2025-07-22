@@ -529,8 +529,14 @@ input[type=number] {
 }
 
 .profile-login .forgot-password a:hover {
-	color: #764ba2;
 	text-decoration: underline;
+}
+
+.forgot-password button{
+	font-size: 13px;
+	padding: 0;
+	font-weight: 500;
+	color: var(--black-color);
 }
 
 .profile-login .social-login {
@@ -809,7 +815,7 @@ input[type=number] {
 /* banner */
 
 .banner_slider .carousel-outr{
-	height: 80vh;
+	max-height: 80vh;
 	overflow: hidden;
 	margin-top: 15px;
 }
@@ -830,9 +836,9 @@ input[type=number] {
 
 .banner_slider .carousel-caption {
   position: absolute;
-  right: 15%;
+  right: 35%;
   bottom: 1.25rem;
-  left: 35%;
+  left: 8%;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
   color: #fff;
@@ -846,15 +852,16 @@ input[type=number] {
 
 .banner_slider .carousel-caption h5 {
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 600;
   line-height: 55px;
-  color: var(--white-color);
+  color: var(--black-color);
 }
 .banner_slider .carousel-caption p {
   font-size: 18px;
-  font-weight: 500;
-  line-height: 25px;
-  color: var(--white-color);
+  font-weight: 400;
+  line-height: 30px;
+  color: #535353;
+  margin-bottom: 30px;
 }
 .banner_slider .carousel-caption .main-btn{
 	padding: 14px 30px;
@@ -865,17 +872,114 @@ input[type=number] {
 }
 .banner_slider .carousel-caption .second-btn{
 	padding: 12px 20px;
-	background-color: transparent;
-}
-.banner_slider .carousel-caption .second-btn:hover{
 	color: var(--black-color);
 	background-color: var(--secondary-color);
+}
+.banner_slider .carousel-caption .second-btn:hover{
+	color: var(--white-color);
+	background-color: var(--main-color);
 }
 
 .banner_slider .carousel-indicators {
   justify-content: end;
   margin-right: 6%;
 }
+
+
+/* new banner carousel */
+.main-carousel{
+  position: relative;
+  margin-top: 20px;
+}
+.main-carousel .owl-nav>div {
+    margin-top: -26px;
+    position: absolute;
+    top: 43%;
+    color: #cdcbcd;
+}
+.main-carousel .owl-nav i {
+    font-size: 22px;
+}
+.main-carousel .owl-nav button {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50% !important;
+  /* border: 1px solid #ffffffab !important; */
+  transition: all 0.3s ease;
+  color: white !important;
+  background-color: var(--main-color) !important;
+}
+.main-carousel .owl-nav .owl-prev {
+    left: 10px;
+    top: 45%;
+}
+.main-carousel .owl-nav .owl-next {
+  right: 10px;
+  top: 45%;
+}
+.main-carousel .owl-carousel .item:hover .item-content {
+    opacity: 1;
+    transition: 1s all;
+}
+.main-carousel .item-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main-carousel .owl-carousel .owl-item img{
+	max-height: 80vh;
+}
+
+
+
+.top-products-caption {
+  position: absolute;
+  left: 30px;
+  bottom: 40px;
+  background: rgba(255,255,255,0.85);
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  max-width: 350px;
+}
+
+.top-products-caption h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.top-products-caption p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.top-products-caption .btn.main-btn {
+  background: #e91e63;
+  color: #fff;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(233,30,99,0.12);
+  transition: background 0.2s;
+}
+
+.top-products-caption .btn.main-btn:hover {
+  background: #c2185b;
+  color: #fff;
+}
+/* END new banner carousel */
+
+
+
+
+
+
+
+
 
 
 
@@ -1611,6 +1715,11 @@ input[type=number] {
 	width: 100%;
 	height: 850px;
 }
+.big-banner-item-bg video{
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+}
 .big-banner-item-bg img{
 	width: 100%;
 	height: 100%;
@@ -1675,6 +1784,35 @@ input[type=number] {
 	object-fit: cover;
 	transition: background-color 0.3s ease;
 }
+
+/* swap */
+/* .most-freq-item-bg .swap-on-hover {
+  position: relative;
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+.most-freq-item-bg .swap-on-hover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.most-freq-item-bg .swap-on-hover__front-image {
+  z-index: 1;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+.most-freq-item-bg .swap-on-hover__back-image {
+  z-index: 0;
+}
+.most-freq-item-bg .swap-on-hover:hover .swap-on-hover__front-image {
+  opacity: 0;
+} */
+/* end swap */
 
 .most-freq-item-cont{
 	display: flex;
@@ -1783,7 +1921,7 @@ input[type=number] {
 
 .mkp-products-item p{
 	font-size: 18px;
-	font-weight:500;
+	font-weight:400;
 	color: #8f8f8f;
 	line-height: 30px;
 	margin-bottom: 35px;
@@ -1870,11 +2008,22 @@ input[type=number] {
 .app-content-img{
 	height: 100%;
 }
-.app-content-img img{
+.video-wrapper3{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: white;
+	border-radius: 20px;
+}
+/* .app-content-img img{
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-}
+} */
 .app-content-dtls{
 	position: absolute;
 	top: 50%;
@@ -2036,21 +2185,30 @@ input[type=number] {
 
 /* ------- custom full pr ---------- */
 .custom-full-pr{
-	background-image: url(../img/bottom-full-slider.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	height: 500px;
-	padding: 60px 0;
 	text-align: center;
+	position: relative;
+}
+
+/* .video-wrapper2{
+	height: 500px;
+	overflow: hidden;
+} */
+.video-wrapper2{
+	width: 100%;
+	height: 500px;
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
 }
 
 .custom-full-pr-cont {
-	height: 100%;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	position: relative;
 }
 
 .custom-full-pr-cont .custom-loved,
@@ -2060,6 +2218,7 @@ input[type=number] {
 	color: var(--main-color);
 	background-color: var(--white-color);
 	cursor: auto;
+	display: inline-block;
 }
 
 .custom-full-pr-cont h2 {
@@ -4633,11 +4792,11 @@ input[type=number] {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: #272f6e;
+	background-color: var(--main-color);
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: #22a7df;
+	background-color: var(--secondary-color);
 	border-radius: 10px;
 }
 
@@ -4707,10 +4866,7 @@ input[type=number] {
 /* ------------------------------------
 		order confirmed
 -------------------------------------*/
-.order-confirm {}
-
 .order-confirm .order-status {
-	/* background: linear-gradient(135deg, #28a745, #20c997); */
 	color: white;
 	padding: 80px;
 	border-radius: 20px;
@@ -5323,6 +5479,95 @@ input[type=number] {
 -----------------------------------*/
 
 
+/* ----------------------------------
+			login page
+-----------------------------------*/
+.login-page form {
+  width: 100%;
+  background-color: #fff; 
+  border-radius: 30px; 
+  position: relative;
+}
 
+.login-page .left {
+  position: relative;
+}
 
+.login-page .left .left-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  line-height: 40px; 
+  height: 100%;
+  background-color: var(--main-color);
+  border-radius: 30px 15% 15% 30px;
+  padding: 30px;
+}
+
+.login-page .left .left-in h3 {
+  font-size: 50px;
+  margin: 0;
+  color: var(--white-color);
+  font-weight: 600;
+  text-align: center;
+}
+.login-page .left .left-in p {
+  font-size: 16px; 
+  margin: 0; 
+  color: var(--white-color);
+  font-weight: 400; 
+}
+
+.login-page .left input[type="submit"] {
+  border: 2px solid #fff; 
+  width: 160px; 
+  height: 46px;
+  border-radius: 8px; 
+  background-color: transparent;
+  color: #fff; 
+  cursor: pointer;
+  font-size: 16px; 
+  font-weight: bold;
+}
+
+.login-page .right {
+  height: 100%; 
+  padding: 60px; 
+  overflow: hidden; 
+}
+
+.login-page h2{
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 40px;
+	font-weight: 600;
+}
+.login-page .profile-login{
+	height: 100%;
+}
+
+@media (max-width: 1200px) {
+	.login-page .right {
+		padding: 35px;
+	}
+	.login-page h2 {
+  		font-size: 35px;
+	}
+}
+@media (max-width: 768px) {
+	.login-page .left .left-in {
+	border-radius: 30px 30px 0 0;
+	min-height: 300px;
+	}
+}
+@media (max-width: 600px) {
+	.login-page .left .left-in h3 {
+  		font-size: 35px;
+	}
+}
+
+/* ----------------------------------
+		  END login page
+-----------------------------------*/
 

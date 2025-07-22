@@ -58,7 +58,7 @@ gsap.from(".most-freq-inner .owl-carousel .item", {
   stagger: 0.2,  
   scrollTrigger: {
     trigger: ".most-freq-inner",    
-    start: "top 50%",             
+    start: "top 80%",             
     end: "bottom 30%",             
     scrub: true,
     markers: false,
@@ -67,10 +67,6 @@ gsap.from(".most-freq-inner .owl-carousel .item", {
 });
 
 // home-shiping-item
-document.addEventListener('DOMContentLoaded', function () {
-    gsap.registerPlugin(ScrollTrigger);
-
-
 gsap.from(".home-shiping-item", {
     duration: 1,
     y: 50,
@@ -79,11 +75,9 @@ gsap.from(".home-shiping-item", {
     ease: "power2.out",
     scrollTrigger: {
         trigger: ".home-shiping-item",
-        start: "top 60%",
+        start: "top 80%",
         toggleActions: "play none none reverse",
     }
-});
-
 });
 
 // makup products
@@ -168,4 +162,6 @@ gsap.ticker.lagSmoothing(0)
 
 
 
-
+// document.addEventListener('DOMContentLoaded', function () {
+//     gsap.registerPlugin(ScrollTrigger);
+// });

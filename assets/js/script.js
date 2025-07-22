@@ -376,6 +376,73 @@ $(document).ready(function(){
 //// END pre loader
 
 
+// main-carousel
+$(document).ready(function () {
+  $('.main-carousel .owl-carousel').owlCarousel({
+    loop: true,
+    margin: 15,
+    nav: true,
+    dots: true,
+    autoplay: false,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    navText: [
+      "<i class='fa fa-arrow-left'></i>",
+      "<i class='fa fa-arrow-right'></i>"
+    ],
+    responsive: {
+      0: {
+        items: 1,
+        stagePadding: 50
+      },
+      600: {
+        items: 1.1,
+        stagePadding: 0
+      },
+      900: {
+        items: 1.2,
+        stagePadding: 0
+      },
+      1200: {
+        items: 1.3,
+        stagePadding: 0
+      }
+    },
+    onChanged: function (event) {
+      // Add smooth transition effects
+      $('.owl-item').removeClass('preview-item');
+      $('.owl-item.active').next('.owl-item').addClass('preview-item');
+    }
+  });
+});
+// $('.main-carousel .owl-carousel').owlCarousel({
+//     loop: true,
+//     margin: 20,
+//     nav: true,
+//     dots: true,
+//     autoplay: true,
+//     autoplayHoverPause: true,
+//     navText: [
+//       "<i class='fa fa-arrow-left-long'></i>",
+//       "<i class='fa fa-arrow-right-long'></i>"
+//     ],
+//     responsive: {
+//       0: {
+//         items: 1
+//       },
+//       400: {
+//         items: 1
+//       },
+//       780: {
+//         items: 2
+//       },
+//       1300: {
+//         items: 2
+//       }
+//     }
+// });
+// close
+
 
 // main products banner
 $('.big-banner-inner .owl-carousel').owlCarousel({
@@ -390,7 +457,7 @@ $('.big-banner-inner .owl-carousel').owlCarousel({
         items: 1
       }
     }
-  })
+});
 // close
 
 
@@ -416,8 +483,8 @@ $('.most-freq .owl-carousel').owlCarousel({
         items: 4
       }
     }
-  })
-  // close
+});
+// close
 
 
 // testimonials
@@ -437,9 +504,8 @@ $('.testim-inner .owl-carousel').owlCarousel({
         items: 1
       }
     }
-  })
-  // close
-
+});
+// close
 
 
   // cart increment and decrement
