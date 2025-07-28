@@ -1234,6 +1234,7 @@ input[type=number] {
 	padding: 10px 30px;
   	border-radius: 7px;
 	background-color: var(--black-color);
+	cursor: pointer;
 }
 .main-btn:hover{
 	color: var(--white-color);
@@ -1250,6 +1251,7 @@ input[type=number] {
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	cursor: pointer;
 }
 .second-btn:hover{
 	color: var(--white-color);
@@ -1637,6 +1639,19 @@ input[type=number] {
 .top-categories .counter-separator {
 	margin: 0 5px;
 }
+
+@media (max-width: 768px) {
+	.main-carousel .owl-carousel .owl-item img {
+		min-height: 65vh;
+	}
+	.main-carousel .owl-nav button {
+		width: 35px;
+		height: 35px;
+	}
+	.banner_slider .carousel-caption .main-btn {
+		padding: 10px 15px;
+	}
+}
 /* ----------- END top products ----------------*/
 
 
@@ -1684,14 +1699,15 @@ input[type=number] {
     right: 0;
 }
 
-.big-banner-item-bg {
+.big-banner-item-bg .video-wrapper7 {
 	width: 100%;
-	height: 850px;
+	height: 100vh;
 }
 .big-banner-item-bg video{
 	width: 100%;
 	height: 100%;
 	border-radius: 20px;
+	object-fit: cover;
 }
 .big-banner-item-bg img{
 	width: 100%;
