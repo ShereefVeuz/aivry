@@ -99,6 +99,7 @@
                   </div> -->
                   <a href="product-listing.html">Products</a>
                   <a href="#">Careers</a>
+                  <a href="blog.html">Blogs</a>
                   <a href="contact.html">Contact Us</a>
                 </nav>
               </div>
@@ -510,6 +511,13 @@
                                   Change Password
                                 </button>
                               </li>
+                              <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="pills-wallet-tab" data-bs-toggle="pill"
+                                  data-bs-target="#pills-wallet" type="button" role="tab"
+                                  aria-controls="pills-wallet" aria-selected="false">
+                                  Wallet & Reward points
+                                </button>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -655,9 +663,11 @@
                                       aria-controls="nav-cancelled" aria-selected="false">
                                       Cancelled
                                     </button>
-                                    <!-- <button class="nav-link" id="nav-returned-tab" data-bs-toggle="tab" data-bs-target="#nav-returned" type="button" role="tab" aria-controls="nav-returned" aria-selected="false">
-                                                      Returned
-                                                    </button> -->
+                                    <button class="nav-link" id="nav-returned-tab" data-bs-toggle="tab"
+                                      data-bs-target="#nav-returned" type="button" role="tab"
+                                      aria-controls="nav-returned" aria-selected="false">
+                                      Returned
+                                    </button>
                                   </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
@@ -821,6 +831,7 @@
                                       </div>
                                     </div>
                                   </div>
+
                                   <div class="tab-pane fade" id="nav-returned" role="tabpanel"
                                     aria-labelledby="nav-returned-tab" tabindex="0">
                                     <!-- order history listing -->
@@ -848,8 +859,8 @@
                                       </div>
                                     </div>
                                   </div>
-                                </div>
 
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -1427,6 +1438,132 @@
                                 </form>
                               </div>
                               </div>
+                            </div>
+                          </div>
+
+                          <!-- wallet & reward points -->
+                          <div class="tab-pane fade" id="pills-wallet" role="tabpanel"
+                            aria-labelledby="pills-wallet-tab" tabindex="0">
+                            <div class="wallet-reward">
+
+                              <h5 class="mb-4">Wallet Overview </h5>
+                              <div class="col-md-12 wallet-reward-head">
+                                <div class="row g-3">
+                                  <div class="col-sm-6 col-md-3 wallet-reward-item-out">
+                                    <div class="wallet-reward-item first-wallet">
+                                      <div class="icon">
+                                        <i class="fa-solid fa-wallet"></i>
+                                      </div>
+                                      <h5>Wallet Balance</h5>
+                                      <h3><span><i class="fa-solid fa-indian-rupee-sign"></i></span> 10,758.00</h3>
+                                      <p>Available for Purchases </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 wallet-reward-item-out">
+                                    <div class="wallet-reward-item second-wallet">
+                                      <div class="icon">
+                                        <i class="fa-regular fa-star"></i>
+                                      </div>
+                                      <h5>Reward Points</h5>
+                                      <h3><span><i class="fa-solid fa-indian-rupee-sign"></i></span> 10,758.00</h3>
+                                      <p>Points Earned </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 wallet-reward-item-out">
+                                    <div class="wallet-reward-item third-wallet">
+                                      <div class="icon">
+                                        <i class="fa-solid fa-plus"></i>
+                                      </div>
+                                      <h5>Total Earned</h5>
+                                      <h3><span><i class="fa-solid fa-indian-rupee-sign"></i></span> 10,758.00</h3>
+                                      <p>Lifetime earnings </p>
+                                    </div>
+                                  </div>
+                                  <div class="col-sm-6 col-md-3 wallet-reward-item-out">
+                                    <div class="wallet-reward-item fourth-wallet">
+                                      <div class="icon">
+                                        <i class="fa-solid fa-cart-shopping"></i>
+                                      </div>
+                                      <h5>Total Spent</h5>
+                                      <h3><span><i class="fa-solid fa-indian-rupee-sign"></i></span> 10,758.00</h3>
+                                      <p>From wallet </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              
+                               <!-- Transaction History -->
+                              <div class="my-5">
+                                  <h5 class="mb-4">Transaction History </h5>
+                                  <!-- <p>Your recent wallet and reward point activities</p> -->
+                                  
+                                  <div class="row g-3">
+                                      <div class="col-md-6">
+                                          <div class="trans-card first-trans-card">
+                                            <div class="trans-icon">
+                                              <i class="fa-solid fa-wallet"></i>
+                                            </div>
+                                            <h5>Wallet Transactions</h5>
+                                            <p><span>10</span> wallet transactions</p>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="trans-card second-trans-card">
+                                            <div class="trans-icon">
+                                              <i class="fas fa-gift"></i>
+                                            </div>
+                                            <h5>Reward Point Transactions</h5>
+                                            <p><span>100</span> reward transactions</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              
+                              <!-- How Rewards Work -->
+                              <div class="mb-4">
+                                  <h5 class="section-title mb-2">How Rewards Work</h5>
+                              </div>
+                              
+                              <div class="row g-3">
+                                  <div class="col-lg-4 col-md-6">
+                                      <div class="rewards-step">
+                                          <div class="step-icon step-shop">
+                                              <i class="fas fa-shopping-bag"></i>
+                                          </div>
+                                          <h5 class="step-title">Shop & Earn</h5>
+                                          <p class="step-description">
+                                              Earn reward points on every 100 rupees spent. The more you spend, the more you earn!
+                                          </p>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="col-lg-4 col-md-6">
+                                      <div class="rewards-step">
+                                          <div class="step-icon step-redeem">
+                                              <i class="fas fa-exchange-alt"></i>
+                                          </div>
+                                          <h5 class="step-title">Redeem Points</h5>
+                                          <p class="step-description">
+                                              Convert your reward points to wallet balance and use them for future purchases.
+                                          </p>
+                                      </div>
+                                  </div>
+                                  
+                                  <div class="col-lg-4 col-md-6">
+                                      <div class="rewards-step">
+                                          <div class="step-icon step-use">
+                                              <i class="fas fa-credit-card"></i>
+                                          </div>
+                                          <h5 class="step-title">Use Wallet</h5>
+                                          <p class="step-description">
+                                              Pay for your orders using your wallet balance and save money on every purchase.
+                                          </p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
                             </div>
                           </div>
 

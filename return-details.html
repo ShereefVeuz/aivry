@@ -99,6 +99,7 @@
                   </div> -->
                   <a href="product-listing.html">Products</a>
                   <a href="#">Careers</a>
+                  <a href="blog.html">Blogs</a>
                   <a href="contact.html">Contact Us</a>
                 </nav>
               </div>
@@ -485,6 +486,124 @@
             </div>
           </div>
 
+          <!-- Return reason -->
+          <div class="return-reason">
+            <h5>Easy Return</h5>
+
+            <div class="return-pr-details">
+              <div class="left-order-dtls-item-cont">
+                <h4>Order Summary</h4>
+                <div class="left-order-dtls-item-content">Product Name: Berry Addiction 50ML</div>
+                <div class="left-order-dtls-item-content">Category: Oil and Lotions</div>
+                <div class="left-order-dtls-item-content">Seller: IvriLotionsIndia</div>
+                <div class="left-order-dtls-item-content">Order date: 12/08/2025</div>
+                <h6>₹2,699</h6>
+              </div>
+            </div>
+
+            <div class="reason-accord">
+              <div class="accordion" id="eventxproAccordion">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="question-number">01. </span>
+                        Return Policy
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#eventxproAccordion">
+                      <div class="accordion-body">
+                        <div class="return-policy-dtls">
+                          <p>
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type 
+                            specimen book. <a href="#">Return Policy</a>  It has survived not only five centuries, but also the leap into 
+                            electronic typesetting, <a href="#">Terms & Conditions</a> remaining essentially unchanged. It was popularised in 
+                            the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                             and more recently with desktop publishing software like Aldus PageMaker including 
+                             versions of Lorem Ipsum.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                              <span class="question-number">02.</span>
+                              Reason for return?
+                          </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#eventxproAccordion">
+                          <div class="accordion-body">
+                            <div class="request-return">
+                              <form>
+                                <!-- Reason for return -->
+                                <div class="form-group row align-items-center">
+                                  <label for="exampleFormControlSelect1" class="col-sm-4 col-form-label">Reason for
+                                    return?</label>
+                                  <div class="col-sm-8">
+                                    <div class="custom-select-wrapper">
+                                      <select class="form-control custom-select" id="exampleFormControlSelect1">
+                                        <option>Damaged & missing products</option>
+                                        <option>Functional & Quality Issues</option>
+                                        <option>Item not as described</option>
+                                      </select>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <!-- Comment -->
+                                <div class="form-group row align-items-center">
+                                  <label for="exampleFormControlTextarea1" class="col-sm-4 col-form-label">Comment</label>
+                                  <div class="col-sm-8">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                      placeholder="Enter comment" rows="3"></textarea>
+                                  </div>
+                                </div>
+
+                                <!-- Upload image row -->
+                                <div class="form-group row align-items-center">
+                                  <label for="exampleFormControlFile1" class="col-sm-4 col-form-label">Upload Image</label>
+                                  <div class="col-sm-8 d-flex align-items-center">
+                                    <label for="exampleFormControlFile1" class="btn btn-primary custom-upload-btn me-2">
+                                      Choose File
+                                    </label>
+                                    <input type="file" class="d-none" id="exampleFormControlFile1" accept="image/*">
+                                    <span id="fileName" class="text-muted">No file chosen</span>
+                                  </div>
+                                </div>
+
+                                <!-- Amount row -->
+                                <div class="form-group row align-items-center">
+                                  <label for="amount" class="col-sm-4 col-form-label">Enter UPI Id</label>
+                                  <div class="col-sm-8">
+                                    <input type="number" class="form-control" id="amount" placeholder="Enter UPI Id">
+                                  </div>
+                                </div>
+
+                                <div class="refund-message">
+                                  <h5><i class="fa-solid fa-circle-check"></i> Refund will be credited in your account</h5>
+                                </div>
+
+                                <div class="d-flex justify-content-end mt-3">
+                                  <button type="button" class="btn main-btn me-2">Cancel</button>
+                                  <button type="submit" id="submitBtn" class="btn second-btn">Request
+                                    Return</button>
+                                </div>
+                              </form>
+                            </div>
+                              
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -670,6 +789,14 @@
   <!-- <script src="assets/js/bootstrap.min.js"></script> -->
   <script>
     AOS.init();
+  </script>
+
+  <script>
+    // // upload image
+    document.getElementById("exampleFormControlFile1").addEventListener("change", function() {
+      const fileName = this.files[0] ? this.files[0].name : "No file chosen";
+      document.getElementById("fileName").textContent = fileName;
+    });
   </script>
 
 </body>
